@@ -2,7 +2,6 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import json
 
-
 def load_enrollment_info(file_path):
     try:
         with open(file_path, 'r') as file:
@@ -10,77 +9,76 @@ def load_enrollment_info(file_path):
     except FileNotFoundError:
         return {}
 
+def parse_user_input(user_input):
+    program = ""
+    year = ""
+    semester = "none"
 
-CS_info_file = r"cs.json"
-CS_info = load_enrollment_info(CS_info_file)
+    if "cs" in user_input.lower():
+        program = "CS"
+    elif "coe" in user_input.lower():
+        program = "COE"
+    elif "it" in user_input.lower():
+        program = "IT"
 
-IT_info_file = r"it.json"
-IT_info = load_enrollment_info(IT_info_file)
+    if "first year" in user_input.lower():
+        year = "first_year"
+    elif "second year" in user_input.lower():
+        year = "second_year"
+    elif "third year" in user_input.lower():
+        year = "third_year"
+    elif "fourth year" in user_input.lower():
+        year = "fourth_year"
 
-COE_info_file = r"coe.json"
-COE_info = load_enrollment_info(COE_info_file)
+    if "first sem" in user_input.lower():
+        semester = "first_sem"
+    elif "second sem" in user_input.lower():
+        semester = "second_sem"
 
+    return program, year, semester
 
-bot = ChatBot('SIT Enrollment Bot')
-trainer = ChatterBotCorpusTrainer(bot)
-trainer.train('chatterbot.corpus.english')
-
-
-def extract_enrollment_query(input_text, CS_info, IT_info, COE_info):
-    input_text_lower = input_text.lower()
-
-    program_keywords = {
-        "CS": CS_info,
-        "IT": IT_info,
-        "COE": COE_info
-    }
-
-    for program, program_info in program_keywords.items():
-        for year, year_info in program_info["keywords"].items():
-            for semester, semester_keywords in year_info.items():
-                # Check if all words in input_text_lower are in semester_keywords
-                if any(keyword.lower() in input_text_lower for keyword in semester_keywords):
-                    return program, year, semester
-
-    return None, None, None
-
-def get_courses(program, year, semester, CS_info, IT_info, COE_info):
-    info = None
+def get_subjects(program, year, semester):
     if program == "CS":
-        info = CS_info
-    elif program == "IT":
-        info = IT_info
+        if semester == "none":
+            return CS_info["courses"]["CS"]["first_sem"] + CS_info["courses"]["CS"][year]["second_sem"]
+        else:
+            return CS_info["courses"]["CS"][year][semester]
     elif program == "COE":
-        info = COE_info
+        if semester == "none":
+            return COE_info["courses"]["COE"][year]["first_sem"] + COE_info["courses"]["COE"][year]["second_sem"]
+        else:
+            return COE_info["courses"]["COE"][year][semester]
+    elif program == "IT":
+        if semester == "none":
+            return IT_info["courses"]["IT"][year]["first_sem"] + IT_info["courses"]["IT"][year]["second_sem"]
+        else:
+            return IT_info["courses"]["IT"][year][semester]
 
-    if not info:
-        return []
 
-    if year not in info["courses"].get(program, {}):
-        return []
 
-    if semester not in info["courses"][program].get(year, {}):
-        return []
+def get_subject_names(subjects):
+    return [subject["subject"] for subject in subjects]
 
-    return info["courses"][program][year][semester]
+CS_info = load_enrollment_info("cs.json")
+COE_info = load_enrollment_info("coe.json")
+IT_info = load_enrollment_info("it.json")
 
+bot = ChatBot("EnrollmentBot")
+
+trainer = ChatterBotCorpusTrainer(bot)
+
+trainer.train("chatterbot.corpus.english")
 
 print("Type something to begin...")
 
 while True:
     user_input = input("You: ")
-    program, year, semester = extract_enrollment_query(user_input, CS_info, IT_info, COE_info)
+    response = bot.get_response(user_input)
 
-    if program and year and semester:
-        courses_info = get_courses(program, year, semester, CS_info, IT_info, COE_info)
-
-        if courses_info:
-            response = f"Here are the {year} {semester} courses in {program}:\n"
-            for course in courses_info:
-                response += f"{course['subject']} {course['desc']}\n"
-        else:
-            response = f"No courses found for {year} {semester} in {program}."
-    else:
-        response = bot.get_response(user_input)
+    if any(keyword in user_input.lower() for keyword in ["cs", "coe", "it"]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
+        program, year, semester = parse_user_input(user_input)
+        subjects = get_subjects(program, year, semester)
+        subject_names = get_subject_names(subjects)
+        response = ", ".join(subject_names)
 
     print("Bot:", response)
