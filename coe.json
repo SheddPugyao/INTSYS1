@@ -1,26 +1,4 @@
 {
-    "keywords": {
-        "first_year": {
-            "all_courses": ["COE first year courses", "COE 1st year"],
-            "first_semester": ["COE first year first sem", "COE 1st year 1st sem"],
-            "second_semester": ["COE first year second sem", "COE 1st year 2nd sem"]
-        },
-        "second_year": {
-            "all_courses": ["COE second year courses", "COE 2nd year courses"],
-            "first_semester": ["COE second year first sem", "COE 2nd year 1st sem"],
-            "second_semester": ["COE second year second sem", "COE 2nd year 2nd sem"]
-        },
-        "third_year": {
-            "all_courses": ["COE third year courses", "COE 3rd year courses"],
-            "first_semester": ["COE third year first sem", "COE 3rd year 1st sem"],
-            "second_semester": ["COE third year second sem", "COE 3rd year 2nd sem"]
-        },
-        "fourth_year": {
-            "all_courses": ["COE fourth year courses", "COE 4th year courses"],
-            "first_semester": ["COE fourth year first sem", "COE 4th year 1st sem"],
-            "second_semester": ["COE fourth year second sem", "COE 4th year 2nd sem"]
-        }
-    },
     "courses": {
         "COE": {
             "first_year": {

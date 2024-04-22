@@ -1,26 +1,4 @@
 {
-    "keywords": {
-        "first_year": {
-            "all_courses": ["IT first year courses", "IT 1st year"],
-            "first_semester": ["IT first year first sem", "IT 1st year 1st sem"],
-            "second_semester": ["IT first year second sem", "IT 1st year 2nd sem"]
-        },
-        "second_year": {
-            "all_courses": ["IT second year courses", "IT 2nd year courses"],
-            "first_semester": ["IT second year first sem", "IT 2nd year 1st sem"],
-            "second_semester": ["IT second year second sem", "IT 2nd year 2nd sem"]
-        },
-        "third_year": {
-            "all_courses": ["IT third year courses", "IT 3rd year courses"],
-            "first_semester": ["IT third year first sem", "IT 3rd year 1st sem"],
-            "second_semester": ["IT third year second sem", "IT 3rd year 2nd sem"]
-        },
-        "fourth_year": {
-            "all_courses": ["IT fourth year courses", "IT 4th year courses"],
-            "first_semester": ["IT fourth year first sem", "IT 4th year 1st sem"],
-            "second_semester": ["IT fourth year second sem", "IT 4th year 2nd sem"]
-        }
-    },
     "courses": {
         "IT": {
             "first_year": {

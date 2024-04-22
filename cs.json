@@ -1,11 +1,4 @@
 {
-    "keywords": {
-        "first_year": {
-            "all_courses": ["CS first year courses", "CS 1st year courses", "CS first year subjects", "CS 1st year subjects", "CS 1st year CS courses", "Computer Science courses"],
-            "first_semester": ["CS first year first sem", "CS first sem first year", "CS 1st sem 1st year", "CS 1st year 1st sem"],
-            "second_semester": ["CS first year second sem", "CS first sem second year", "CS 1st year 2nd sem", "CS 1st year 2nd sem"]
-        }
-    },
     "courses": {
         "CS": {
             "first_year": {
