@@ -1,6 +1,8 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.logic import SpecificResponseAdapter
+from rich.console import Console
+from rich.table import Table
 import json
 
 # Function to load enrollment information from JSON files
@@ -43,7 +45,6 @@ def parse_user_input(user_input):
 
     return program, year, semester
 
-
 # Function to get subjects based on program, year, and semester
 def get_subjects(program, year, semester):
     if program == "CS":
@@ -82,40 +83,67 @@ def get_subjects(program, year, semester):
 # Function to generate response containing subject names
 def get_subject_names(subjects, program, year, semester):
     if subjects:
-        if semester == "all":
-            response = f"\nHere are all courses in {year} {program}:\n"
-            # Use a set to keep track of subjects already included
-            included_subjects = set()
-            for course in subjects:
-                # Check if the subject has already been included
-                if course['subject'] not in included_subjects:
-                    response += f"\t{course['subject']} {course['desc']}\n"
-                    included_subjects.add(course['subject'])
-        else:
-            response = f"\nHere are the {year} {semester} courses in {program}:\n"
-            for course in subjects:
-                response += f"\t{course['subject']} {course['desc']}\n"
+        response = f"Here are the {year} {semester} courses in {program}:\n"
+        console = Console()
+        table = Table()
+        table.add_column("Subject", style="bold")
+        table.add_column("Description", style="bold")
+
+        for course in subjects:
+            table.add_row(course['subject'], course['desc'])
+
+        console.print(table)
     else:
-        if semester == "all":
-            response = f"No courses found for {year} in {program}."
-        else:
-            response = f"No courses found for {year} {semester} in {program}."
+        response = f"No courses found for {year} {semester} in {program}."
+
     return response
 
-def get_subject_names_all(subjects, program, semester):
-    response = f"\nHere are all courses in {program}:\n"
+
+def get_subject_names_all(subjects, program, semester, title):
+    console = Console()
+    
+    # Print the introductory message
+    intro_message = f"EnrollmentBot: Here are the {semester} courses in {program}:"
+    console.print(intro_message)
+    
+    # Display the table
+    table = Table(title=title)  # Set the table title dynamically
+    table.add_column("Year", style="bold")
+    table.add_column("Semester", style="bold")
+    table.add_column("Subject", style="bold")
+    table.add_column("Description", style="bold")
+    
+    previous_year = None
+    previous_semester = None
+    
     for year, semesters in subjects.items():
-        response += f"{year}:\n"
+        year = year.replace("first", "1ST").replace("second", "2ND").replace("third", "3RD").replace("fourth", "4TH")
         for semester, courses in semesters.items():
-            response += f"\t{semester}:\n"
-            for course in courses:
-                response += f"\t\t{course['subject']} {course['desc']}\n"
-    return response
+            semester = semester.replace("first_sem", "1ST SEM").replace("second_sem", "2ND SEM")
+            for i, course in enumerate(courses):
+                year_cell = year if year != previous_year else ""
+                semester_cell = semester if semester != previous_semester else ""
+                if i == 0:
+                    table.add_row(year_cell, semester_cell, course['subject'], course['desc'])
+                else:
+                    table.add_row("", "", course['subject'], course['desc'])
+                previous_year = year
+                previous_semester = semester
+        
+        # Add row separator after each semester
+        table.add_row("", "", "", "")
+    
+    # Add row separator after each year
+    table.add_row("", "", "", "")
+    
+    console.print(table)
+    
+    return ""
+
 
 CS_info = load_enrollment_info("cs.json")
 COE_info = load_enrollment_info("coe.json")
 IT_info = load_enrollment_info("it.json")
-
 
 bot = ChatBot("EnrollmentBot",
               logic_adapters=[
@@ -143,34 +171,39 @@ bot = ChatBot("EnrollmentBot",
 
 trainer = ChatterBotCorpusTrainer(bot)
 
+console = Console()
+
 print("Type something to begin...")
 
 while True:
     user_input = input("You: ")
     response = bot.get_response(user_input)
 
-    # program, year, semester = parse_user_input(user_input)
-    # print("Parsed input - Program:", program, "Year:", year, "Semester:", semester)
-    
-    # NOT WORKING - Goal: If the user inputs incomplete prompts (e.g., 'courses'), bot shall respond with "For what major would you like to know courses offered?". User must specify (e.g., "IT"), after that, the bot must provide all the subjects offered for IT
     if "courses" in user_input.lower():
-        prompt = f"For what major would you like to know courses offered? \nThe SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)"
-        print("Bot:", prompt)  
+        print("Bot: For which major would you like to know courses offered? The SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)")
         major = input("You: ") 
         if any(keyword in major.lower() for keyword in ["cs", "coe", "it"]):
             program, year, semester = parse_user_input(major)
             subjects = get_subjects(program, year, semester)
-            response = get_subject_names_all(subjects, program, semester)
+            response = get_subject_names_all(subjects, program, semester, f"{major.upper()} Subjects for Curriculum 2023-2024")
         else:
-            print("Please specify what major.")
+            print("Please specify a major.")
+            continue
 
     elif any(keyword in user_input.lower() for keyword in ["cs", "coe", "it"]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
         program, year, semester = parse_user_input(user_input)
         subjects = get_subjects(program, year, semester)
         response = get_subject_names(subjects, program, year, semester)
     
-    print("Bot:", response)
+    console.print("EnrollmentBot: ", response)
+
+    # CURRENT PROGRESS:
+    # User can retrieve subject info by specifying the course, year, and sem (e.g. "cs first year first sem") or by specifying the course and year (e.g., cs first year)
+    # User can retrieve subject info of a specific major by prompting "courses", [specific major]
 
 
-# CURRENT PROGRESS:
-    # User can get subjects offered by specifying the course, year, and sem (e.g. "cs first year first sem") or by specifying the course and year (e.g., cs first year)
+    # THINGS TO DO:
+    # Include data about the enrollment process
+    # Find a way to optimize the code since it's taking too long to retrieve the info. Tried asyncio pero parang ang hirap intindihin
+    # Remove "EnrollmentBot: " after displaying tables
+    # Add related keywords dun sa mga condition na pwedeng i-mention ng user. For example, instead of 'courses', they might input 'subjects' but still want to see the courses offered for a specific course
