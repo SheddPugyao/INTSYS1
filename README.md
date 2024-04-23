@@ -1,10 +1,8 @@
-git checkout soriano
 git fetch --all
 git pull
 
-;IF YOU WILL HAVE CHANGES
+;create own branch if you'll have changes
 git checkout -b lastname
-
 
 ;push
 git add . 
