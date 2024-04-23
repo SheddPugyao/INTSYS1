@@ -1,12 +1,13 @@
-git checkout soriano
+; always update
 git fetch --all
 git pull
 
-;IF YOU WILL HAVE CHANGES
-git checkout -b lastname
+; if you have changes sa "master" branch
+stash your changes
+git checkout -b branchname
+pop stash
 
-
-;push
+; push
 git add . 
-git commit -m "date"
+git commit -m "date time"
 git push
