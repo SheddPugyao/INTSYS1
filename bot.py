@@ -12,7 +12,7 @@ def load_enrollment_info(file_path):
 def parse_user_input(user_input):
     program = ""
     year = ""
-    semester = "none"
+    semester = "all"
 
     if "cs" in user_input.lower():
         program = "CS"
@@ -22,13 +22,13 @@ def parse_user_input(user_input):
         program = "IT"
 
     if "first year" in user_input.lower():
-        year = "first_year"
+        year = "first year"
     elif "second year" in user_input.lower():
-        year = "second_year"
+        year = "second year"
     elif "third year" in user_input.lower():
-        year = "third_year"
+        year = "third year"
     elif "fourth year" in user_input.lower():
-        year = "fourth_year"
+        year = "fourth year"
 
     if "first sem" in user_input.lower():
         semester = "first_sem"
@@ -39,17 +39,17 @@ def parse_user_input(user_input):
 
 def get_subjects(program, year, semester):
     if program == "CS":
-        if semester == "none":
+        if semester == "all":
             return CS_info["courses"]["CS"]["first_sem"] + CS_info["courses"]["CS"][year]["second_sem"]
         else:
             return CS_info["courses"]["CS"][year][semester]
     elif program == "COE":
-        if semester == "none":
+        if semester == "all":
             return COE_info["courses"]["COE"][year]["first_sem"] + COE_info["courses"]["COE"][year]["second_sem"]
         else:
             return COE_info["courses"]["COE"][year][semester]
     elif program == "IT":
-        if semester == "none":
+        if semester == "all":
             return IT_info["courses"]["IT"][year]["first_sem"] + IT_info["courses"]["IT"][year]["second_sem"]
         else:
             return IT_info["courses"]["IT"][year][semester]
@@ -57,7 +57,11 @@ def get_subjects(program, year, semester):
 
 
 def get_subject_names(subjects):
-    return [subject["subject"] for subject in subjects]
+    response =  f"\nHere are the {year} {semester} courses in {program}:\n"
+    for course in subjects:
+                response += f"\t{course['subject']} {course['desc']}\n"
+    return response
+
 
 CS_info = load_enrollment_info("cs.json")
 COE_info = load_enrollment_info("coe.json")
@@ -79,6 +83,6 @@ while True:
         program, year, semester = parse_user_input(user_input)
         subjects = get_subjects(program, year, semester)
         subject_names = get_subject_names(subjects)
-        response = ", ".join(subject_names)
+        # response = ", ".join(subject_names)
 
-    print("Bot:", response)
+    print("Bot:", subject_names)
