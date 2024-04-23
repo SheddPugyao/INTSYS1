@@ -14,7 +14,7 @@ def load_enrollment_info(file_path):
 # Function to parse user input and extract program, year, and semester
 def parse_user_input(user_input):
     program = ""
-    year = ""
+    year = "all"
     semester = "all"
 
     # Convert user input to lowercase for case-insensitive comparison
@@ -35,8 +35,6 @@ def parse_user_input(user_input):
         year = "third year"
     elif "fourth year" in user_input_lower:
         year = "fourth year"
-    else:
-        year = "all"
 
     if "first sem" in user_input_lower:
         semester = "first_sem"
@@ -50,16 +48,7 @@ def parse_user_input(user_input):
 def get_subjects(program, year, semester):
     if program == "CS":
         if semester == "all" and year == "all":
-            return (
-                CS_info["courses"]["CS"]["first year"]["first_sem"]
-                + CS_info["courses"]["CS"]["first year"]["second_sem"]
-                + CS_info["courses"]["CS"]["second year"]["first_sem"]
-                + CS_info["courses"]["CS"]["second year"]["second_sem"]
-                + CS_info["courses"]["CS"]["third year"]["first_sem"]
-                + CS_info["courses"]["CS"]["third year"]["second_sem"]
-                + CS_info["courses"]["CS"]["fourth year"]["first_sem"]
-                + CS_info["courses"]["CS"]["fourth year"]["second_sem"]
-            )
+            return CS_info["courses"]["CS"]
         elif semester == "all":
             return (
                 CS_info["courses"]["CS"][year]["first_sem"]
@@ -69,16 +58,7 @@ def get_subjects(program, year, semester):
             return CS_info["courses"]["CS"][year][semester]
     elif program == "COE":
         if semester == "all" and year == "all":
-            return (
-                COE_info["courses"]["COE"]["first year"]["first_sem"]
-                + COE_info["courses"]["COE"]["first year"]["second_sem"]
-                + COE_info["courses"]["COE"]["second year"]["first_sem"]
-                + COE_info["courses"]["COE"]["second year"]["second_sem"]
-                + COE_info["courses"]["COE"]["third year"]["first_sem"]
-                + COE_info["courses"]["COE"]["third year"]["second_sem"]
-                + COE_info["courses"]["COE"]["fourth year"]["first_sem"]
-                + COE_info["courses"]["COE"]["fourth year"]["second_sem"]
-            )
+            return COE_info["courses"]["COE"]
         elif semester == "all":
             return (
                 COE_info["courses"]["COE"][year]["first_sem"]
@@ -87,21 +67,12 @@ def get_subjects(program, year, semester):
         else:
             return COE_info["courses"]["COE"][year][semester]
     elif program == "IT":
-        if semester == "all":
+        if semester == "all" and year == "all":
+            return IT_info["courses"]["IT"]
+        elif semester == "all":
             return (
                 IT_info["courses"]["IT"][year]["first_sem"]
                 + IT_info["courses"]["IT"][year]["second_sem"]
-            )
-        elif semester == "all" and year == "all":
-            return (
-                IT_info["courses"]["IT"]["first year"]["first_sem"]
-                + IT_info["courses"]["IT"]["first year"]["second_sem"]
-                + IT_info["courses"]["IT"]["second year"]["first_sem"]
-                + IT_info["courses"]["IT"]["second year"]["second_sem"]
-                + IT_info["courses"]["IT"]["third year"]["first_sem"]
-                + IT_info["courses"]["IT"]["third year"]["second_sem"]
-                + IT_info["courses"]["IT"]["fourth year"]["first_sem"]
-                + IT_info["courses"]["IT"]["fourth year"]["second_sem"]
             )
         else:
             return IT_info["courses"]["IT"][year][semester]
@@ -133,12 +104,12 @@ def get_subject_names(subjects, program, year, semester):
 
 def get_subject_names_all(subjects, program, semester):
     response = f"\nHere are all courses in {program}:\n"
-    for year in subjects: 
-        response += f"{year}:\n" 
-        for semester, courses in subjects[year].items():
-            response += f"\t{semester}:\n" 
+    for year, semesters in subjects.items():
+        response += f"{year}:\n"
+        for semester, courses in semesters.items():
+            response += f"\t{semester}:\n"
             for course in courses:
-                response += f"\t\t{course['subject']} {course['desc']}\n" 
+                response += f"\t\t{course['subject']} {course['desc']}\n"
     return response
 
 CS_info = load_enrollment_info("cs.json")
@@ -178,15 +149,16 @@ while True:
     user_input = input("You: ")
     response = bot.get_response(user_input)
 
-    program, year, semester = parse_user_input(user_input)
-    print("Parsed input - Program:", program, "Year:", year, "Semester:", semester)
+    # program, year, semester = parse_user_input(user_input)
+    # print("Parsed input - Program:", program, "Year:", year, "Semester:", semester)
     
     # NOT WORKING - Goal: If the user inputs incomplete prompts (e.g., 'courses'), bot shall respond with "For what major would you like to know courses offered?". User must specify (e.g., "IT"), after that, the bot must provide all the subjects offered for IT
     if "courses" in user_input.lower():
-        prompt = "For what major would you like to know courses offered?"
+        prompt = f"For what major would you like to know courses offered? \nThe SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)"
         print("Bot:", prompt)  
         major = input("You: ") 
         if any(keyword in major.lower() for keyword in ["cs", "coe", "it"]):
+            program, year, semester = parse_user_input(major)
             subjects = get_subjects(program, year, semester)
             response = get_subject_names_all(subjects, program, semester)
         else:
