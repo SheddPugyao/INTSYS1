@@ -33,6 +33,103 @@
 					},
 					{ "subject": "PATHFT2", "desc": "Exercise-based Fitness Activities" }
 				]
+			},
+			"second year": {
+				"first_sem": [
+					{
+						"subject": "IMDBSE1",
+						"desc": "Information Management and Database System"
+					},
+					{ "subject": "PROGIT2", "desc": "Object-Oriented Programming" },
+					{
+						"subject": "APPDEV1",
+						"desc": "Introduction to Applications Development"
+					},
+					{ "subject": "ITMGNT", "desc": "Project Management" },
+					{ "subject": "DITRUC2", "desc": "Discrete Structures 2" },
+					{ "subject": "DSALGO1", "desc": "Data Structures and Algorithms" },
+					{ "subject": "GETHCS1", "desc": "Ethics" },
+					{ "subject": "PATHFT3D", "desc": "Bowling" }
+				],
+				"second_sem": [
+					{ "subject": "IMDBSE2", "desc": "Advanced Database Systems" },
+					{ "subject": "ENGGSF1", "desc": "Software Engineering 1" },
+					{
+						"subject": "INASSE1",
+						"desc": "Informations Assurance and Security"
+					},
+					{ "subject": "WEBSYS1", "desc": "Web Systems and Technologies 1" },
+					{ "subject": "ALGCOM1", "desc": "Algorithm and Complexity" },
+					{ "subject": "ENGMAT9", "desc": "Probability and Statistics" },
+					{
+						"subject": "GELECT2",
+						"desc": "General Elective 2 (Gender and Society)"
+					},
+					{ "subject": "PATFT4A", "desc": "Basketball/Volleyball" }
+				]
+			},
+			"third year": {
+				"first_sem": [
+					{
+						"subject": "GAMDES1",
+						"desc": "Introduction to Game Design and Development"
+					},
+					{ "subject": "WEBSYS2", "desc": "Web Systems and Technologies 2" },
+					{
+						"subject": "ENGGSF2",
+						"desc": "Software Engineering 2"
+					},
+					{ "subject": "INTSYS1", "desc": "Intelligent Systems" },
+					{ "subject": "DIGDES1", "desc": "Digital Design" },
+					{ "subject": "METHOD1", "desc": "Methods of Research" },
+					{
+						"subject": "AUTHFL1",
+						"desc": "Automata Theory and Formal Languages"
+					}
+				],
+				"second_sem": [
+					{
+						"subject": "CMARCH1",
+						"desc": "Computer Architecture and Organization"
+					},
+					{ "subject": "QASSUR1", "desc": "Quality Assurance" },
+					{
+						"subject": "MOBCOM1",
+						"desc": "Mobile Computing"
+					},
+					{
+						"subject": "PPLANG1",
+						"desc": "Principles of Programming Languages"
+					},
+					{ "subject": "ENTECH1", "desc": "Technopreneurship" },
+					{ "subject": "THESCS1", "desc": "CS Thesis Writing 1" },
+					{
+						"subject": "DATSCI1",
+						"desc": "Introduction to Data Science"
+					}
+				]
+			},
+			"fourth year": {
+				"first_sem": [
+					{
+						"subject": "SOPRAC1",
+						"desc": "Social Issues and Professional Practice"
+					},
+					{ "subject": "EMTECH1", "desc": "Emerging Technologies" },
+					{
+						"subject": "THESCS2",
+						"desc": "CS Thesis Writing 2"
+					},
+					{ "subject": "LRIZAL1", "desc": "life and Works of Jose Rizal" },
+					{
+						"subject": "GELECT3",
+						"desc": "General Elective 3 (People and the Earth's Ecosystem)"
+					},
+					{ "subject": "ARTAPP1", "desc": "Art Appreciation" }
+				],
+				"second_sem": [
+					{ "subject": "BCSOJT1", "desc": "Practicum (490 hours)" }
+				]
 			}
 		}
 	}
