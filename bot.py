@@ -82,8 +82,11 @@ def get_subjects(program, year, semester):
 
 # Function to generate response containing subject names
 def get_subject_names(subjects, program, year, semester):
+    console = Console()
     if subjects:
-        response = f"Here are the {year} {semester} courses in {program}:\n"
+        # response = f"Here are the {year} {semester} courses in {program}:\n"
+        intro_message = f"Here are the {year} {semester} courses in {program}:\n"
+        console.print(intro_message)
         console = Console()
         table = Table()
         table.add_column("Subject", style="bold")
@@ -96,7 +99,7 @@ def get_subject_names(subjects, program, year, semester):
     else:
         response = f"No courses found for {year} {semester} in {program}."
 
-    return response
+    return ""
 
 
 def get_subject_names_all(subjects, program, semester, title):
@@ -195,7 +198,6 @@ while True:
         subjects = get_subjects(program, year, semester)
         response = get_subject_names(subjects, program, year, semester)
     
-    console.print("EnrollmentBot: ", response)
 
     # CURRENT PROGRESS:
     # User can retrieve subject info by specifying the course, year, and sem (e.g. "cs first year first sem") or by specifying the course and year (e.g., cs first year)
@@ -205,5 +207,5 @@ while True:
     # THINGS TO DO:
     # Include data about the enrollment process
     # Find a way to optimize the code since it's taking too long to retrieve the info. Tried asyncio pero parang ang hirap intindihin
-    # Remove "EnrollmentBot: " after displaying tables
+    # Remove "EnrollmentBot: " after displaying tables (FIXED)
     # Add related keywords dun sa mga condition na pwedeng i-mention ng user. For example, instead of 'courses', they might input 'subjects' but still want to see the courses offered for a specific course
