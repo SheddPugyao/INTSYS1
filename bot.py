@@ -151,6 +151,11 @@ IT_info = load_enrollment_info("it.json")
 bot = ChatBot("EnrollmentBot",
               logic_adapters=[
                   {
+                      'import_path': 'chatterbot.logic.BestMatch',
+                      'default_response': 'Sorry, I do not understand. Please clarify your questions about SIT enrollment.',
+                      'maximum_similarity_threshold': 0.2
+                  },
+                  {
                       'import_path': 'chatterbot.logic.SpecificResponseAdapter',
                       'input_text': 'hello',
                       'output_text': 'Hi, I\'m EnrollmentBot. How can I help you with the SIT Enrollment?'
@@ -161,16 +166,17 @@ bot = ChatBot("EnrollmentBot",
                       'output_text': 'Hi, I\'m EnrollmentBot. How can I help you with the SIT Enrollment?'
                   },
                   {
-                      'import_path': 'chatterbot.logic.BestMatch',
-                      'default_response': 'Sorry, I do not understand. Please clarify your questions about SIT enrollment.',
-                      'maximum_similarity_threshold': 0.4
-                  },
-                  {
                       'import_path': 'chatterbot.logic.SpecificResponseAdapter',
                       'input_text': 'courses',
                       'output_text': 'For what major would you like to know courses offered?'
+                  },
+                  {
+                      'import_path': 'chatterbot.logic.SpecificResponseAdapter',
+                      'input_text': 'enrollment',
+                      'output_text': 'For information about enrollment process, please specify the major.'
                   }
               ])
+
 
 trainer = ChatterBotCorpusTrainer(bot)
 
@@ -197,8 +203,9 @@ while True:
         program, year, semester = parse_user_input(user_input)
         subjects = get_subjects(program, year, semester)
         response = get_subject_names(subjects, program, year, semester)
-    
 
+    else:
+        print("Bot:", response)
     # CURRENT PROGRESS:
     # User can retrieve subject info by specifying the course, year, and sem (e.g. "cs first year first sem") or by specifying the course and year (e.g., cs first year)
     # User can retrieve subject info of a specific major by prompting "courses", [specific major]
