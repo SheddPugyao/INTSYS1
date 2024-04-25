@@ -85,7 +85,7 @@ def get_subject_names(subjects, program, year, semester):
     console = Console()
     if subjects:
         # response = f"Here are the {year} {semester} courses in {program}:\n"
-        intro_message = f"Here are the {year} {semester} courses in {program}:\n"
+        intro_message = f"EnrollmentBot: Here are the {year} {semester} courses in {program}:\n"
         console.print(intro_message)
         console = Console()
         table = Table()
@@ -106,7 +106,7 @@ def get_subject_names_all(subjects, program, semester, title):
     console = Console()
     
     # Print the introductory message
-    intro_message = f"EnrollmentBot: Here are the {semester} courses in {program}:"
+    intro_message = f"EnrollmentBot: Here are {semester} the courses in {program}:"
     console.print(intro_message)
     
     # Display the table
@@ -182,37 +182,66 @@ trainer = ChatterBotCorpusTrainer(bot)
 
 console = Console()
 
-print("Type something to begin...")
+print("EnrollmentBot: Hi! How may I help you?")
 
 while True:
     user_input = input("You: ")
     response = bot.get_response(user_input)
 
-    if "courses" in user_input.lower():
-        print("Bot: For which major would you like to know courses offered? The SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)")
+    if any(keyword in user_input.lower() for keyword in ["cs", "coe", "it"]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
+        program, year, semester = parse_user_input(user_input)
+        subjects = get_subjects(program, year, semester)
+        response = get_subject_names(subjects, program, year, semester)
+
+    elif "courses" in user_input.lower():
+        print("EnrollmentBot: For which major would you like to know courses offered? The SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)")
         major = input("You: ") 
         if any(keyword in major.lower() for keyword in ["cs", "coe", "it"]):
             program, year, semester = parse_user_input(major)
             subjects = get_subjects(program, year, semester)
             response = get_subject_names_all(subjects, program, semester, f"{major.upper()} Subjects for Curriculum 2023-2024")
         else:
-            print("Please specify a major.")
+            print("EnrollmentBot: Please specify a major.")
             continue
-
-    elif any(keyword in user_input.lower() for keyword in ["cs", "coe", "it"]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
-        program, year, semester = parse_user_input(user_input)
-        subjects = get_subjects(program, year, semester)
-        response = get_subject_names(subjects, program, year, semester)
-
     else:
-        print("Bot:", response)
+        print("EnrollmentBot:", response)
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # CURRENT PROGRESS:
     # User can retrieve subject info by specifying the course, year, and sem (e.g. "cs first year first sem") or by specifying the course and year (e.g., cs first year)
     # User can retrieve subject info of a specific major by prompting "courses", [specific major]
-
+    # Remove "EnrollmentBot: " after displaying tables (FIXED)
 
     # THINGS TO DO:
     # Include data about the enrollment process
+        # If the user asks for the enrollment process and requirements, the bot should refer them to SIT Office (e.g., Please go to SIT Office. . .)
+    
+    # Include data about the schedule of enrollments for SY 2024-2025 (include upcoming short term)
+        # The bot should refer them to the office or to the UB pages (e.g., Please go to this site and wait for announcements . . .) 
+
+    # Include responses that gives info about the program offered by SIT 
+        # ex. User: What are the programs offered?
+        #     EnrollmentBot:    
+        #                       BSCS - Bachelor of Science in Computer Science
+        #                       BSIT - Bachelor of Science in Information Technology
+        #                       BSCOE - Bachelor of Science in Computer Engineering
+        #                       ASE - Applied Software Engineering
+        #                       ACT-MWD - Associate in Computer Technology with Specialization in Multimedia and Web Development
+
+    # Fix conditions
+        # Instead of "cs first year first sem", what if the user inputs "first year first sem"? 
+            #Possible Solutions:
+            # 1. Bot: Please clarify your inquiry
+            # 2. Bot: For what program are you asking for? (CS, IT, COE)
+    
+
+    # EXTRA THINGS TO DO:
     # Find a way to optimize the code since it's taking too long to retrieve the info. Tried asyncio pero parang ang hirap intindihin
-    # Remove "EnrollmentBot: " after displaying tables (FIXED)
     # Add related keywords dun sa mga condition na pwedeng i-mention ng user. For example, instead of 'courses', they might input 'subjects' but still want to see the courses offered for a specific course
+
+
+    # TERMS:
+        # COURSES/SUBJECTS - pertains to subjects (MATHMW1, CMARCH1, etc)
+        # PROGRAM - BSCS, BSIT, BSCOE, ASE, ACT-MWD
