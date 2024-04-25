@@ -147,6 +147,7 @@ def get_subject_names_all(subjects, program, semester, title):
 CS_info = load_enrollment_info("cs.json")
 COE_info = load_enrollment_info("coe.json")
 IT_info = load_enrollment_info("it.json")
+MISC_info = load_enrollment_info("misc.json")
 
 bot = ChatBot("EnrollmentBot",
               logic_adapters=[
@@ -182,7 +183,16 @@ while True:
     user_input = input("You: ")
     response = bot.get_response(user_input)
 
-    if "courses" in user_input.lower():
+    if "process" in user_input.lower():
+        response = MISC_info["process"]
+        console.print("EnrollmentBot: ",response)
+
+    elif "summer" in user_input.lower():
+        response = MISC_info["summer"]
+        console.print("EnrollmentBot: ",response)
+    
+
+    elif "courses" in user_input.lower():
         print("Bot: For which major would you like to know courses offered? The SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)")
         major = input("You: ") 
         if any(keyword in major.lower() for keyword in ["cs", "coe", "it"]):
@@ -205,7 +215,7 @@ while True:
 
 
     # THINGS TO DO:
-    # Include data about the enrollment process
+    # Include data about the enrollment process (FIXED)
     # Find a way to optimize the code since it's taking too long to retrieve the info. Tried asyncio pero parang ang hirap intindihin
     # Remove "EnrollmentBot: " after displaying tables (FIXED)
     # Add related keywords dun sa mga condition na pwedeng i-mention ng user. For example, instead of 'courses', they might input 'subjects' but still want to see the courses offered for a specific course
