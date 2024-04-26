@@ -205,6 +205,7 @@ while True:
                 response += f"{key}: {value}\n"
         console.print("EnrollmentBot: \n", response)
 
+# ADD ACT AND ACT-MWD
     elif any(keyword in user_input.lower() for keyword in ["cs", "coe", "it"]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
         program, year, semester = parse_user_input(user_input)
         subjects = get_subjects(program, year, semester)

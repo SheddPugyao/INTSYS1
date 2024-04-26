@@ -1,0 +1,76 @@
+{
+	"courses": {
+		"ACT": {
+			"first year": {
+				"first_sem": [
+					{ "subject": "INTRCS1", "desc": "Introduction to Computing Systems" },
+					{ "subject": "PLFORM1", "desc": "Program Logic Formulation" },
+					{ "subject": "THSELF1", "desc": "Understanding the Self" },
+					{ "subject": "ARTAPP1", "desc": "Art Appreciation" },
+					{ "subject": "MATHMW1", "desc": "Mathematics in the Modern World" },
+					{ "subject": "PRPCOM1", "desc": "Purposive Communication" },
+					{
+						"subject": "NSTPRO1",
+						"desc": "National Service Training Program 1"
+					},
+					{
+						"subject": "EDPHYS1",
+						"desc": "PE Elective 1"
+					},
+					{ "subject": "SOCORN1", "desc": "Social Orientation" }
+				],
+				"second_sem": [
+					{ "subject": "SITNET1", "desc": "Networks and Communications" },
+					{ "subject": "PROGIT1", "desc": "Computer Programming" },
+					{ "subject": "HUMCOM1", "desc": "Human Computer Interaction" },
+					{ "subject": "DITRUC1", "desc": "Discrete Structures 1" },
+					{ "subject": "DIGIMD1", "desc": "Digital Media 1" },
+					{ "subject": "CWORLD1", "desc": "The Contemporary World" },
+					{
+						"subject": "NSTPRO2",
+						"desc": "National Service Training Program 2"
+					},
+					{ "subject": "EDPHYS2", "desc": "PE Elective 2" }
+				]
+			},
+			"second year": {
+				"first_sem": [
+					{
+						"subject": "OPSYST1",
+						"desc": "Operating System"
+					},
+					{ "subject": "PROGIT2", "desc": "Object-Oriented Programming" },
+					{
+						"subject": "APPDEV1",
+						"desc": "Introduction to Applications Development"
+					},
+					{ "subject": "DSALGO1", "desc": "Data Structures and Algorithms" },
+					{
+						"subject": "FILPIN",
+						"desc": "Kontekstwalisadong Kumunikasyon sa Filipino"
+					},
+					{ "subject": "GETHCS1", "desc": "Ethics" },
+					{ "subject": "DIGIMD2", "desc": "Digital Media 2" }
+				],
+				"second_sem": [
+					{
+						"subject": "IMDBSE1",
+						"desc": "Information Management and Database Systems"
+					},
+					{ "subject": "WEBSYS1", "desc": "Web Systems and Technologies 1" },
+					{
+						"subject": "SYSINT1",
+						"desc": "System Integration and Architecture"
+					},
+					{ "subject": "SCITES1", "desc": "Science, Technology, and Society" },
+					{
+						"subject": "RPHIST1",
+						"desc": "Readings in Philippine History"
+					},
+					{ "subject": "ACTCER1", "desc": "ACT Certification" },
+					{ "subject": "ACTOJT1", "desc": "Practicum" }
+				]
+			}
+		}
+	}
+}
