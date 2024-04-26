@@ -167,6 +167,51 @@ def get_subject_names_all(subjects, program, semester, title):
     
     return ""
 
+def parse_process(user_input):
+    process=""
+    user_input_lower = user_input.lower()
+
+    if any(keyword in user_input_lower for keyword in ["current"]):
+        process = "CURRENT"
+    elif any(keyword in user_input_lower for keyword in ["incoming", "freshmen"]):
+        process = "INCOMING"
+    elif any(keyword in user_input_lower for keyword in ["returnee", "returning"]):
+        process = "RETURNING"
+    elif any(keyword in user_input_lower for keyword in ["transferee"]):
+        process = "TRANSFEREE"
+
+    return process
+
+def get_process(process):
+    if process == "CURRENT":
+        return MISC_info["process"]["CURRENT"]
+    elif process == "INCOMING":
+        return MISC_info["process"]["INCOMING"]
+    elif process == "RETURNING":
+        return MISC_info["process"]["RETURNING"]
+    elif process == "TRANSFEREE":
+        return MISC_info["process"]["TRANSFEREE"]
+    else:
+        return ""
+
+def get_process_steps(process, steps):
+    console = Console()
+    if steps:
+        # response = f"Here are the {year} {semester} courses in {program}:\n"
+        intro_message = f"EnrollmentBot: Here is the Enrollment Procedure for {process} STUDENTS:\n"
+        console.print(intro_message)
+        console = Console()
+        table = Table()
+        table.add_column(f"Enrollment Procedures for {process} STUDENTS", style="bold")
+
+        for process in steps:
+            table.add_row(process['steps'])
+
+        console.print(table)
+    else:
+        response = f"No procedure found for {steps} STUDENTS."
+
+    return ""
 
 CS_info = load_enrollment_info("cs.json")
 COE_info = load_enrollment_info("coe.json")
@@ -216,9 +261,22 @@ while True:
     user_input = input("You: ")
     response = bot.get_response(user_input)
 
-    if "process" in user_input.lower():
-        response = MISC_info["process"]
-        console.print("EnrollmentBot: ",response)
+
+    if any(keyword in user_input.lower() for keyword in ["current", "current student", "incoming", "incoming student", "freshmen", "returnee", "returning", "returning studnet"]):
+        process = parse_process(user_input)
+        steps = get_process(process)
+        response = get_process_steps(process, steps)
+
+    elif "process" and any(keyword in user_input.lower() for keyword in ["procedure", "steps", "process"]):
+        print("For what enrollment process would you like to know: \n\tCurrent Student \n\tIncoming Student \n\tReturning Student \n\tTransferees")
+        process_input = input("You: ")
+        if any(keyword in process_input.lower() for keyword in ["current", "incoming", "freshmen", "returnee", "returning"]):
+            process = parse_process(process_input)
+            steps = get_process(process)
+            response = get_process_steps(process, steps)
+        else:
+            print("EnrollmentBot: Please specify what enrollment process you are looking for")
+            continue
 
     elif "summer" in user_input.lower():
         response = MISC_info["summer"]
@@ -243,7 +301,6 @@ while True:
 
         console.print(response)
         console.print(table)
-        
 
     elif any(keyword in user_input.lower() for keyword in ["cs", "computer science", "compsci", "comsci", "bscs",
                                                            "coe", "computer engineering", "comeng", "compeng", "comp eng", "bscoe",
@@ -251,28 +308,31 @@ while True:
                                                            "act", "associate in computer technology", "associate in comp tech",
                                                            "act-mwd", "associate in computer technology with specialization in multimedia", "associate in comp tech w specialization in multimedia", "mwd", "multimedia"
                                                            ]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
+
         program, year, semester = parse_user_input(user_input)
         subjects = get_subjects(program, year, semester)
         response = get_subject_names(subjects, program, year, semester)
 
-    elif "courses" in user_input.lower():
-        print("EnrollmentBot: For which major would you like to know courses offered? The SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)")
+    elif "courses" and any(keyword in user_input.lower() for keyword in ["subject", "curriculum"]):
+        print("EnrollmentBot: For which major would you like to know courses offered?\nThe SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)")
         major = input("You: ") 
         if any(keyword in major.lower() for keyword in ["cs", "computer science", "compsci", "comsci", "bscs",
                                                            "coe", "computer engineering", "comeng", "compeng", "comp eng", "bscoe",
                                                            "it", "information technology", "info tech", "information tech", "bsit",
                                                            "act", "associate in computer technology", "associate in comp tech",
                                                            "act-mwd", "associate in computer technology with specialization in multimedia", "associate in comp tech w specialization in multimedia", "mwd", "multimedia"]):
-            program, year, semester = parse_user_input(major)
-            subjects = get_subjects(program, year, semester)
-            response = get_subject_names_all(subjects, program, semester, f"{major.upper()} Subjects for Curriculum 2023-2024")
+            if not any(keyword in user_input.lower() for keyword in ["cs", "it", "coe"]):
+                print("EnrollmentBot: Please clarify your inquiry or specify the program (CS, IT, COE).")
+                continue
+            else:
+                program, year, semester = parse_user_input(major)
+                subjects = get_subjects(program, year, semester)
+                response = get_subject_names_all(subjects, program, semester, f"{major.upper()} Subjects for Curriculum 2023-2024")
         else:
             print("EnrollmentBot: Please specify a major.")
             continue
     else:
         print("EnrollmentBot:", response)
-
-
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # CURRENT PROGRESS:
@@ -298,7 +358,7 @@ while True:
 
 
     # THINGS TO DO:
-    # Fix conditions
+    # Fix conditions(ADDED)
         # Instead of "cs first year first sem", what if the user inputs "first year first sem"? 
             #Possible Solutions:
             # 1. Bot: Please clarify your inquiry
@@ -308,7 +368,6 @@ while True:
 
     # EXTRA THINGS TO DO:
     # Find a way to optimize the code since it's taking too long to retrieve the info. Tried asyncio pero parang ang hirap intindihin
-
 
     # TERMS:
         # COURSES/SUBJECTS - pertains to subjects (MATHMW1, CMARCH1, etc)
