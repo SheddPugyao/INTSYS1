@@ -22,12 +22,16 @@ def parse_user_input(user_input):
     # Convert user input to lowercase for case-insensitive comparison
     user_input_lower = user_input.lower()
 
-    if "cs" in user_input_lower:
+    if any(keyword in user_input_lower for keyword in ["cs", "computer science", "compsci", "comsci", "bscs"]):
         program = "CS"
-    elif "coe" in user_input_lower:
+    elif any(keyword in user_input_lower for keyword in ["coe", "computer engineering", "comeng", "compeng", "comp eng", "bscoe"]):
         program = "COE"
-    elif "it" in user_input_lower:
+    elif any(keyword in user_input_lower for keyword in ["it", "information technology", "info tech", "information tech", "bsit"]):
         program = "IT"
+    elif any(keyword in user_input_lower for keyword in ["act-mwd", "associate in computer technology with specialization in multimedia", "associate in comp tech w specialization in multimedia", "mwd", "multimedia"]):
+        program = "ACT-MWD"
+    elif any(keyword in user_input_lower for keyword in ["act", "associate in computer technology", "associate in comp tech"]):
+        program = "ACT"
 
     if "first year" in user_input_lower:
         year = "first year"
@@ -77,8 +81,28 @@ def get_subjects(program, year, semester):
             )
         else:
             return IT_info["courses"]["IT"][year][semester]
+    elif program == "ACT":
+        if semester == "all" and year == "all":
+            return ACT_info["courses"]["ACT"]
+        elif semester == "all":
+            return (
+                ACT_info["courses"]["ACT"][year]["first_sem"]
+                + ACT_info["courses"]["ACT"][year]["second_sem"]
+            )
+        else:
+            return ACT_info["courses"]["ACT"][year][semester]
+    elif program == "ACT-MWD":
+        if semester == "all" and year == "all":
+            return ACT_MWD_info["courses"]["ACT-MWD"]
+        elif semester == "all":
+            return (
+                ACT_MWD_info["courses"]["ACT-MWD"][year]["first_sem"]
+                + ACT_MWD_info["courses"]["ACT-MWD"][year]["second_sem"]
+            )
+        else:
+            return ACT_MWD_info["courses"]["ACT-MWD"][year][semester]
     else:
-        return IT_info["courses"]["IT"][year][semester]
+        return ACT_MWD_info["courses"]["ACT-MWD"][year][semester]
 
 # Function to generate response containing subject names
 def get_subject_names(subjects, program, year, semester):
@@ -106,7 +130,7 @@ def get_subject_names_all(subjects, program, semester, title):
     console = Console()
     
     # Print the introductory message
-    intro_message = f"EnrollmentBot: Here are {semester} the courses in {program}:"
+    intro_message = f"EnrollmentBot: Here are all the courses in {program}:"
     console.print(intro_message)
     
     # Display the table
@@ -147,7 +171,10 @@ def get_subject_names_all(subjects, program, semester, title):
 CS_info = load_enrollment_info("cs.json")
 COE_info = load_enrollment_info("coe.json")
 IT_info = load_enrollment_info("it.json")
+ACT_info = load_enrollment_info("act.json")
+ACT_MWD_info = load_enrollment_info("act-mwd.json")
 MISC_info = load_enrollment_info("misc.json")
+PROGRAMS_info = load_enrollment_info("programs.json")
 
 bot = ChatBot("EnrollmentBot",
               logic_adapters=[
@@ -204,9 +231,26 @@ while True:
             for key, value in item.items():
                 response += f"{key}: {value}\n"
         console.print("EnrollmentBot: \n", response)
+    
+    elif any(keyword in user_input.lower() for keyword in ["programs", "programs offered", "SIT programs"]):
+        response = "EnrollmentBot: Here are the programs offered by the SIT department:\n"
+        table = Table()
+        table.add_column("Program", style="bold")
+        table.add_column("Description", style="bold")
 
-# ADD ACT AND ACT-MWD
-    elif any(keyword in user_input.lower() for keyword in ["cs", "coe", "it"]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
+        for program_code, description in PROGRAMS_info["programs"].items():
+            table.add_row(program_code, description)
+
+        console.print(response)
+        console.print(table)
+        
+
+    elif any(keyword in user_input.lower() for keyword in ["cs", "computer science", "compsci", "comsci", "bscs",
+                                                           "coe", "computer engineering", "comeng", "compeng", "comp eng", "bscoe",
+                                                           "it", "information technology", "info tech", "information tech", "bsit",
+                                                           "act", "associate in computer technology", "associate in comp tech",
+                                                           "act-mwd", "associate in computer technology with specialization in multimedia", "associate in comp tech w specialization in multimedia", "mwd", "multimedia"
+                                                           ]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
         program, year, semester = parse_user_input(user_input)
         subjects = get_subjects(program, year, semester)
         response = get_subject_names(subjects, program, year, semester)
@@ -214,7 +258,11 @@ while True:
     elif "courses" in user_input.lower():
         print("EnrollmentBot: For which major would you like to know courses offered? The SIT department offers Information Technology (IT), Computer Science (CS), and Computer Engineering (CoE)")
         major = input("You: ") 
-        if any(keyword in major.lower() for keyword in ["cs", "coe", "it"]):
+        if any(keyword in major.lower() for keyword in ["cs", "computer science", "compsci", "comsci", "bscs",
+                                                           "coe", "computer engineering", "comeng", "compeng", "comp eng", "bscoe",
+                                                           "it", "information technology", "info tech", "information tech", "bsit",
+                                                           "act", "associate in computer technology", "associate in comp tech",
+                                                           "act-mwd", "associate in computer technology with specialization in multimedia", "associate in comp tech w specialization in multimedia", "mwd", "multimedia"]):
             program, year, semester = parse_user_input(major)
             subjects = get_subjects(program, year, semester)
             response = get_subject_names_all(subjects, program, semester, f"{major.upper()} Subjects for Curriculum 2023-2024")
@@ -232,14 +280,14 @@ while True:
     # User can retrieve subject info of a specific major by prompting "courses", [specific major]
     # Remove "EnrollmentBot: " after displaying tables (FIXED)
 
-    # THINGS TO DO:
+
     # Include data about the enrollment process
         # If the user asks for the enrollment process and requirements, the bot should refer them to SIT Office (e.g., Please go to SIT Office. . .) (ADDED)
     
     # Include data about the schedule of enrollments for SY 2024-2025 (include upcoming short term)
         # The bot should refer them to the office or to the UB pages (e.g., Please go to this site and wait for announcements . . .) (ADDED)
 
-    # Include responses that gives info about the program offered by SIT 
+    # Include responses that gives info about the program offered by SIT (ADDED)
         # ex. User: What are the programs offered?
         #     EnrollmentBot:    
         #                       BSCS - Bachelor of Science in Computer Science
@@ -248,16 +296,18 @@ while True:
         #                       ASE - Applied Software Engineering
         #                       ACT-MWD - Associate in Computer Technology with Specialization in Multimedia and Web Development
 
+
+    # THINGS TO DO:
     # Fix conditions
         # Instead of "cs first year first sem", what if the user inputs "first year first sem"? 
             #Possible Solutions:
             # 1. Bot: Please clarify your inquiry
             # 2. Bot: For what program are you asking for? (CS, IT, COE)
+    # Add related keywords dun sa mga condition na pwedeng i-mention ng user. For example, instead of 'courses', they might input 'subjects' but still want to see the courses offered for a specific course
     
 
     # EXTRA THINGS TO DO:
     # Find a way to optimize the code since it's taking too long to retrieve the info. Tried asyncio pero parang ang hirap intindihin
-    # Add related keywords dun sa mga condition na pwedeng i-mention ng user. For example, instead of 'courses', they might input 'subjects' but still want to see the courses offered for a specific course
 
 
     # TERMS:
