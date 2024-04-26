@@ -147,6 +147,7 @@ def get_subject_names_all(subjects, program, semester, title):
 CS_info = load_enrollment_info("cs.json")
 COE_info = load_enrollment_info("coe.json")
 IT_info = load_enrollment_info("it.json")
+MISC_info = load_enrollment_info("misc.json")
 
 bot = ChatBot("EnrollmentBot",
               logic_adapters=[
@@ -188,7 +189,23 @@ while True:
     user_input = input("You: ")
     response = bot.get_response(user_input)
 
-    if any(keyword in user_input.lower() for keyword in ["cs", "coe", "it"]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
+    if "process" in user_input.lower():
+        response = MISC_info["process"]
+        console.print("EnrollmentBot: ",response)
+
+    elif "summer" in user_input.lower():
+        response = MISC_info["summer"]
+        console.print("EnrollmentBot: ",response)
+
+    elif "schedule" in user_input.lower():
+        info = MISC_info["schedule"]
+        response = ""
+        for item in info:
+            for key, value in item.items():
+                response += f"{key}: {value}\n"
+        console.print("EnrollmentBot: \n", response)
+
+    elif any(keyword in user_input.lower() for keyword in ["cs", "coe", "it"]) and any(keyword in user_input.lower() for keyword in ["first", "second", "third", "fourth"]) or any(keyword in user_input.lower() for keyword in ["first sem", "second sem"]):
         program, year, semester = parse_user_input(user_input)
         subjects = get_subjects(program, year, semester)
         response = get_subject_names(subjects, program, year, semester)
@@ -216,10 +233,10 @@ while True:
 
     # THINGS TO DO:
     # Include data about the enrollment process
-        # If the user asks for the enrollment process and requirements, the bot should refer them to SIT Office (e.g., Please go to SIT Office. . .)
+        # If the user asks for the enrollment process and requirements, the bot should refer them to SIT Office (e.g., Please go to SIT Office. . .) (ADDED)
     
     # Include data about the schedule of enrollments for SY 2024-2025 (include upcoming short term)
-        # The bot should refer them to the office or to the UB pages (e.g., Please go to this site and wait for announcements . . .) 
+        # The bot should refer them to the office or to the UB pages (e.g., Please go to this site and wait for announcements . . .) (ADDED)
 
     # Include responses that gives info about the program offered by SIT 
         # ex. User: What are the programs offered?
