@@ -1,0 +1,314 @@
+{
+	"process": {
+		"CURRENT": [
+			{
+				"steps": "1. Check the schedule of enrollment posted in the UB Website(https://ubaguio.edu/) and official Facebook page(https://facebook.com/universityofbaguio/)."
+			},
+			{
+				"steps": "2. Log in to the UB student portal(https://portal.ubaguio.edu/) \n\t1. Username \n\t2.Birthdate \n\t3.Password"
+			},
+			{ "steps": "3. Register your preferred course/s and schedule" },
+			{
+				"steps": "4. Contact the Enrollment Adviser/Secretary/Dean of the school regarding concerns about the subjects or the enrollment system through official email or Facebook account of the school."
+			},
+			{
+				"steps": "5. Pay the required down payment in any of the accredited banks or at the UB Cashier."
+			},
+			{ "steps": "6. View your schedule on the Student Portal." },
+			{
+				"steps": "7. Proceed to MIS Office at F building for your school ID validation."
+			}
+		],
+		"INCOMING": [
+			{ "steps": "ADMISSION REQUIREMENTS" },
+			{
+				"steps": "For Grade 12 Students expected to graduate at the end of the current school year."
+			},
+			{
+				"steps": "1. Certified true copy of Grade 11 report card (F-138/SF9) with complete and passing grades and Grade 12 First Semester Report Card (F-138/SF9) duly signed by the school principal; or"
+			},
+			{
+				"steps": "2. Certificate of No Failing Grades(https://drive.google.com/file/d/1-0KwitATIE2zyo6VKH3N0Xk0KPxa9aGY/view) filled out by the school principal"
+			},
+			{
+				"steps": "3. Photocopy of PSA Birth Certificate\n- Note: Students born abroad should submit a photocopy of Philippine passport (Bio-page) or Philippine Recognition Certificate.\n"
+			},
+			{
+				"steps": "For Grade 12 students who graduated prior to the current school year and has not enrolled in any tertiary schools before:"
+			},
+			{
+				"steps": "1. Original photocopy of Grade 12 Report Card (F-138/SF9) duly signed by the school principal."
+			},
+			{
+				"steps": "2. Photocopy of PSA Birth Certificate\n- Note: Students born abroad should submit a photocopy of Philippine passport (Bio-page) or Philippine Recognition Certificate\n"
+			},
+			{
+				"steps": "For Undergraduate Students - Non-formal Secondary Graduates"
+			},
+			{
+				"steps": "1. Certified True Copy of the Original Diploma released by the DepEd Central Office"
+			},
+			{
+				"steps": "2. Original Certificate of Rating for Passer of the Alternative Learning System (ALS) 3. Photocopy of PSA Birth Certificate\n- Note: Students born abroad should submit a photocopy of Philippine passport (Bio-page) or Philippine Recognition Certificate\n"
+			},
+			{
+				"steps": "RESERVATION FOR INCOMING FRESHMEN(FIRST SEMESTER AY 2024-2025)"
+			},
+			{ "steps": "ONLINE RESERVATION PROCEDURES" },
+			{
+				"steps": "1. Register at UB Student Portal(https://portal.ubaguio.edu/)."
+			},
+			{
+				"steps": "2. Click \"Apply as a New Student, complete all the needed information, and click submit the registration. You will receive an email regarding your APPLICANT ID NUMBER that you will use for the reservation fee."
+			},
+			{
+				"steps": "3. Download and fill-out the Declaration and Waiver Form(https://drive.google.com/file/d/1_dAAsm8-75Dz6m86vVR9CFwzuA5HDgkr/view) and Data Privacy Consent Form(https://drive.google.com/file/d/19MmU2_lou8yFFgEqb4HOr751U_wM4izm/view)."
+			},
+			{
+				"steps": "4. Pay the Admission Processing Fee of Php 1,000.00 to any UB accredited Banks. \n\t- The admission processing fee is NON-REFUNDABLE but will be credited to the tuition fee once enrolled.\n\t- For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/)."
+			},
+			{
+				"steps": "5. Prepare and scan the admission requirements (PDF format ONLY).\n\t- Filename: Applicant ID Number Lastname_Firstname_Middle Name "
+			},
+			{
+				"steps": "6. Go to the New Student Online Credentials Submission Form(https://docs.google.com/forms/d/e/1FAIpQLSeJJ4VbFO2kwLlEylOESEzQJxFlWuXhwESzZ0S0cAKWMsbFcQ/viewform) and upload the scanned copy of the admission requirements and reservation fee acknowledgment receipt."
+			},
+			{
+				"steps": "7. Once the needed admission documents are verified and accepted. ARC staff will approve the application for reservation."
+			},
+			{
+				"steps": "8. Courses will be reserved based on the student's program and curriculum."
+			},
+			{
+				"steps": "9. You shall receive a confirmation email of your reservation with your UB student ID number."
+			},
+			{
+				"steps": "Note:\n- To confirm your reserved slot please submit the original F-138/SF9 (report card) and other requirements that were not submitted during the reservation period:\n- Pay the required down payment in any of the accredited banks or at the UB Cashier:\n\t- For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/). \n\t- Upload the scanned copy of the proof of payment to the Online Payment Verification Form(https://docs.google.com/forms/d/e/1FAIpQLSeeaC_ZJlHOJfmXoXnwczJATehmGvK_hQWrA5PsVkwlahSPxA/viewform)\n\t- Payments made at the UB Cashier will be posted to your account \n\t- Reserved slot is valid only until MAY 31, 2024:\n- Unconfirmed slots will be given to those with complete enrollment credentials.\n"
+			},
+			{ "steps": "WALK-IN / CAMPUS RESERVATION PROCEDURES" },
+			{ "steps": "1. Prepare a photocopy of all admission credentials." },
+			{
+				"steps": "2. Register at UB Student Portal(https://portal.ubaguio.edu/)."
+			},
+			{
+				"steps": "3. Click \"Apply as a New Student\", complete all the needed information and click submit the registration."
+			},
+			{
+				"steps": "4. Fill-out the Declaration and Waiver Form(https://drive.google.com/file/d/1_dAAsm8-75Dz6m86vVR9CFwzuA5HDgkr/view) and Data Privacy Consent Form(https://drive.google.com/file/d/19MmU2_lou8yFFgEqb4HOr751U_wM4izm/view)."
+			},
+			{
+				"steps": "5. Submit the original and photocopy of admission requirements to the admission officer."
+			},
+			{
+				"steps": "6. Once admission documents are verified, the admission officer approves the reservation then gives your Student ID number."
+			},
+			{
+				"steps": "7. Courses will be reserved based on the student's program and curriculum."
+			},
+			{
+				"steps": "8. Pay the reservation fee of Php 1,000.00 at the UB cashier and present the receipt to the admission officer."
+			},
+			{
+				"steps": "9. Admission officer returns the photocopy of admission requirements with the copy of the student directory."
+			},
+			{
+				"steps": "Note: To complete your reserved courses to Enrolled status:\n\t1. Submit the original F-138 (SF9) and other requirements that were not submitted during the reservation period.\n\t2. Courses that were reserved will be finalized based on the student's program and curriculum.\n\t3. Pay the required down payment (25%) of the total tuition fee.\n\t4. View your schedule on the student portal.\n\t5. Proceed to the MIS Office at F-Building for your school ID Application.\n"
+			},
+			{
+				"steps": "ADMISSION FOR INCOMING FRESHMEN (With Complete grade 11 and Grade 12 Credentials - FIRST SEMESTER AY 2024-2025)"
+			},
+			{ "steps": "ONLINE ENROLLMENT PROCEDURES" },
+			{
+				"steps": "1. Register at UB Student Portal.(https://portal.ubaguio.edu/)"
+			},
+			{
+				"steps": "2. Click \"Apply as a New Student\", complete all the needed information and click submit the registration. You will receive an email regarding your APPLICANT ID NUMBER that you will use for the reservation fee."
+			},
+			{
+				"steps": "3. Download and fill-out the Declaration and Waiver Form(https://drive.google.com/file/d/1_dAAsm8-75Dz6m86vVR9CFwzuA5HDgkr/view) and Data Privacy Consent Form(https://drive.google.com/file/d/19MmU2_lou8yFFgEqb4HOr751U_wM4izm/view)."
+			},
+			{
+				"steps": "4. Pay the Reservation Fee of Php 1,000.00 to any UB accredited Banks.\n\t- The admission processing fee is NON-REFUNDABLE but will be credited to the tuition fee once enrolled.\n\t- For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/)."
+			},
+			{
+				"steps": "5. Prepare and scan the admission requirements (PDF format ONLY).\n\t- Filename: Applicant ID Number_Lastname_Firstname_Middle Name"
+			},
+			{
+				"steps": "6. Go to the New Student Online Credentials Submission Form(https://docs.google.com/forms/d/e/1FAIpQLSeJJ4VbFO2kwLlEylOESEzQJxFlWuXhwESzZ0S0cAKWMsbFcQ/viewform) and upload the scanned copy of admission requirements and reservation fee acknowledgement receipt."
+			},
+			{
+				"steps": "7. The Admissions and Records Center (ARC) will evaluate all the submitted documents and approve the application for enrollment."
+			},
+			{
+				"steps": "8. ARC encodes the courses based on the student's program and curriculum."
+			},
+			{
+				"steps": "9. You shall receive an email with your UB Student ID number, procedures on how to access the enrollment portal and how to activate your UB email address."
+			},
+			{
+				"steps": "10. Pay the required down payment in any of the accredited banks or at the UB Cashier.\n\t- For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/)."
+			},
+			{
+				"steps": "11. Upload the scanned copy of receipt of down payment to the Online Payment Verification Form(https://docs.google.com/forms/d/e/1FAIpQLSeeaC_ZJlHOJfmXoXnwczJATehmGvK_hQWrA5PsVkwlahSPxA/viewform)."
+			},
+			{
+				"steps": "12. Check your schedule on the Student Portal(https://portal.ubaguio.edu/)"
+			},
+			{
+				"steps": "13. You may visit the MIS Office at F Building for your school ID application.\n"
+			},
+			{ "steps": "WALK-IN / CAMPUS ENROLLMENT PROCEDURES" },
+			{ "steps": "1. Prepare a photocopy of all admission credentials." },
+			{
+				"steps": "2. Register at UB Student Portal(https://portal.ubaguio.edu/)."
+			},
+			{
+				"steps": "3. Click \"Apply as a New Student\", complete all the needed information and click submit the registration."
+			},
+			{
+				"steps": "4. Fill-out the Declaration and Waiver Form(https://drive.google.com/file/d/1_dAAsm8-75Dz6m86vVR9CFwzuA5HDgkr/view) and Data Privacy Consent Form(https://drive.google.com/file/d/19MmU2_lou8yFFgEqb4HOr751U_wM4izm/view)."
+			},
+			{
+				"steps": "5. Submit the original and photocopied credentials to the admission officer."
+			},
+			{
+				"steps": "6. Once the needed documents are verified and accepted, the admission officer approves the application then gives your Student ID number."
+			},
+			{
+				"steps": "7. Courses will be encoded based on the student's program and curriculum."
+			},
+			{
+				"steps": "8. Pay the reservation fee of Php 1,000.00 and required down payment (25%) of the total tuition fee at the UB cashier and present the receipt to the admission officer.\n\t- Note: Separate receipt for the reservation fee and down payment."
+			},
+			{
+				"steps": "9. Admission officer returns the photocopy of credentials with the copy of the student directory."
+			},
+			{ "steps": "10. View your schedule on the Student Portal." },
+			{
+				"steps": "11. Proceed to the MIS Office at F-Building for your school ID Application."
+			}
+		],
+		"RETURNING": [
+			{
+				"steps": "1. Settle back accounts (if any). Request account clearance and re-activation through the Online Activation and Resetting of Accounts Form(https://docs.google.com/forms/d/e/1FAIpQLSf5-LcVLxiZGe5FGBXi5LxpXO7s7v0QZ1vjQ29iUds1TZQWGw/viewform)."
+			},
+			{
+				"steps": "2. Email the Dean's office for re-evaluation of courses and curriculum. \n\t- If the dean has queries, he/she may email you for clarification."
+			},
+			{
+				"steps": "3. If there are no concerns, the Dean/Secretary/Enrollment adviser encodes the required courses."
+			},
+			{
+				"steps": "4. Pay the the required down payment in any of the accredited banks or at the UB Cashier.\n\t- For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/)."
+			},
+			{
+				"steps": "5. Upload the scanned copy of the proof of payment to the Online Payment Verification Form(https://docs.google.com/forms/d/e/1FAIpQLSeeaC_ZJlHOJfmXoXnwczJATehmGvK_hQWrA5PsVkwlahSPxA/viewform)."
+			},
+			{
+				"steps": "6. Check your schedule on the Student Portal(https://portal.ubaguio.edu/)."
+			}
+		],
+		"TRANSFEREE": [
+			{ "steps": "ADMISSION REQUIREMENTS" },
+			{ "steps": "1. Transfer Credential" },
+			{ "steps": "2. Copy of Grades" },
+			{ "steps": "3. Certificate of Good Moral Character" },
+			{
+				"steps": "4. Photocopy of PSA Birth Certificate \n\t- Note: Students born abroad should submit a photocopy of Philippine Passport(Bio-page) or Philippine Recognition Certificate"
+			},
+			{
+				"steps": "5. PSA Marriage Certificate (for married female students)\n"
+			},
+			{ "steps": "ONLINE ENROLLMENT PROCEDURES" },
+			{
+				"steps": "1. Register at UB Student Portal(https://portal.ubaguio.edu/)."
+			},
+			{
+				"steps": "2. Click \"Apply as a New Student\", complete all the needed information and click submit the registration. You will receive an email regarding your APPLICANT ID NUMBER that you will use for the reservation fee."
+			},
+			{
+				"steps": "3. Download and fill-out the Declaration and Waiver Form(https://drive.google.com/file/d/11gRvC519CCI3Omni384iIPHaAnydbeHi/view) and Data Privacy Consent Form(https://drive.google.com/file/d/19MmU2_lou8yFFgEqb4HOr751U_wM4izm/view)"
+			},
+			{
+				"steps": "4. Pay the Reservation Fee of Php 1,000.00 to any UB accredited Banks. \n\t- The admission processing fee is NON-REFUNDABLE but will be credited to the tuition fee once enrolled. \n\t- For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/). "
+			},
+			{
+				"steps": "5. Prepare and scan the documentary requirements (PDF format ONLY). "
+			},
+			{
+				"steps": "6. Go to the New Student Online Credentials Submission Form(https://docs.google.com/forms/d/e/1FAIpQLSeJJ4VbFO2kwLlEylOESEzQJxFlWuXhwESzZ0S0cAKWMsbFcQ/viewform) and upload the scanned copy of admission requirements and reservation fee acknowledgement receipt."
+			},
+			{
+				"steps": "7. The Admissions and Records Center (ARC) will check all the submitted documents and approve your application for enrollment."
+			},
+			{
+				"steps": "8. ARC sends a copy of your courses taken to the Dean's office for evaluation. \n\t- Note: If the Dean has queries before crediting a course, he/she may email you for clarification."
+			},
+			{
+				"steps": "9. If there are no concerns, the Dean emails the result of the evaluation."
+			},
+			{
+				"steps": "10. The concerned Dean/Enrollment Adviser/School Secretary encodes the courses based on the result of the evaluation."
+			},
+			{
+				"steps": "11. You shall receive an email with your UB Student ID number, procedures on how to access the enrollment portal, and how to activate your UB email address. "
+			},
+			{
+				"steps": "12. Pay the required down payment in any of the accredited banks or at the UB Cashier.\n\t- For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/)."
+			},
+			{
+				"steps": "13. Upload the scanned copy of receipt of down payment to the Online Payment Verification Form(https://docs.google.com/forms/d/e/1FAIpQLSeeaC_ZJlHOJfmXoXnwczJATehmGvK_hQWrA5PsVkwlahSPxA/viewform)."
+			},
+			{
+				"steps": "14. After five (5) working days, you may now check your schedule on the Student Portal(https://portal.ubaguio.edu/).\n"
+			},
+			{ "steps": "WALK-IN / CAMPUS ENROLLMENT PROCEDURES" },
+			{
+				"steps": "1. Prepare original and photocopy of all admission credentials."
+			},
+			{
+				"steps": "2. Proceed to the respective Dean's office for evaluation and crediting of courses. You will be given an admission slip signed and approved by the Dean."
+			},
+			{
+				"steps": "3. Register at UB Student Portal(https://portal.ubaguio.edu/)."
+			},
+			{
+				"steps": "4. Click \"Apply as a New Student\", complete all the needed information and click submit the registration."
+			},
+			{
+				"steps": "5. Fill-out the Declaration and Waiver Form(https://drive.google.com/file/d/11gRvC519CCI3Omni384iIPHaAnydbeHi/view) and Data Privacy Consent Form(https://drive.google.com/file/d/19MmU2_lou8yFFgEqb4HOr751U_wM4izm/view)"
+			},
+			{
+				"steps": "6. Submit the original and photocopy of admission requirements to the admission officer."
+			},
+			{
+				"steps": "7. Once admission documents are verified, the admission officer gives your Student ID number."
+			},
+			{
+				"steps": "8. Pay the reservation fee of Php 1,000.00 at the UB cashier and present the receipt to the admission officer."
+			},
+			{
+				"steps": "9. Admission officer returns the photocopy of admission requirements with the copy of the student directory."
+			},
+			{
+				"steps": "10. Proceed to the Dean's office for the encoding of courses based on the results of the evaluation."
+			},
+			{
+				"steps": "11. Pay the required down payment (25%) of the total tuition fee at the UB cashier."
+			},
+			{ "steps": "12. View your schedule on the student portal." },
+			{
+				"steps": "13. Proceed to the MIS Office at F-Building for your school ID Application."
+			}
+		]
+	},
+	"summer": "For more information, visit the \"SIT_Enrollment\" FB page or https://sit.ubaguio.edu/",
+	"schedule": [
+		{
+			"Incoming Freshmen/Transferees": "First Semester of Academic Year 2024-2025 until August 12, 2024"
+		},
+		{ "Second Year": "To be announced" },
+		{ "Third Year": "To be announced" },
+		{ "Fourth Year": "To be announced" }
+	]
+}
