@@ -55,8 +55,11 @@ while True:
         table = Table()
         table.add_column("EnrollmentBot: ")
 
-        for item in response:
-            table.add_row(item)
+        for index, item in enumerate(response):
+            if index == 0:
+                table.add_row(item, style="bold")
+            else:
+                table.add_row(item)
 
         console.print(table)
     elif response_all:
