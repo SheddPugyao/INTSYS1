@@ -523,7 +523,7 @@ all_course = [
                 "HCORDI1 - Cordillera: History and Socio-Cultural Heritage",
                 "SOCORN2 - Social Orientation"
             ],
-            "first YEAR 2ND SEMESTER": [
+            "1ST YEAR 2ND SEMESTER": [
                 "SITNET1 - Networks and Communications",
                 "PROGIT1 - Computer Programming",
                 "HUMCOM1 - Human Computer Interaction",
