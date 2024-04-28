@@ -313,7 +313,7 @@ enrollment_process_data = [
         ]
     },
     {
-        "process": ["Reservation Procedures for Incoming Freshmen", "Reservatoin for freshmen"],
+        "process": ["Reservation Procedures for Incoming Freshmen", "Reservation for freshmen"],
         "steps": [
             "Certainly! Here are the online reservation procedures for incoming freshmen:",
             "Register at UB Student Portal.",
