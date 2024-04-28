@@ -52,8 +52,8 @@ while True:
 
 
     if response:
-        table = Table(title="Enrollment Bot")
-        table.add_column("Response")
+        table = Table()
+        table.add_column("EnrollmentBot: ")
 
         for item in response:
             table.add_row(item)
