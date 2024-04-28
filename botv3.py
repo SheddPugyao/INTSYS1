@@ -3,7 +3,7 @@ from rich.table import Table
 
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-from test_data import enrollment_data, enrollment_process_data
+from test_data import enrollment_data, enrollment_process_data, all_course
 
 bot = ChatBot('EnrollmentBot')
 
@@ -12,6 +12,10 @@ trainer = ListTrainer(bot)
 # Train the bot
 for course in enrollment_data:
     for semester, subjects in course["subjects"].items():
+        trainer.train(subjects)
+
+for courseall in all_course:
+    for semester, subjects in courseall["subjects"].items():
         trainer.train(subjects)
 
 for process in enrollment_process_data:
@@ -38,6 +42,14 @@ while True:
             for process in process_data["process"]:
                 if process.lower() in user_input:
                     response = process_data["steps"]
+    
+    #all subjects
+    for course_all_data in all_course:
+        for course in course_all_data["course"]:
+            if course.lower() in user_input:
+                response_all = course_all_data["subjects"]
+                
+
 
     if response:
         table = Table(title="Enrollment Bot")
@@ -47,8 +59,19 @@ while True:
             table.add_row(item)
 
         console.print(table)
+    elif response_all:
+        console = Console()
+
+        table = Table(show_header=True)
+        table.add_column("Semester")
+        table.add_column("Subjects")
+        for semester, subjects in response_all.items():
+            table.add_row(semester, "\n".join(subjects))
+        console.print(table)
+
     else:
         print("Bot: I'm sorry, I couldn't find information for that query. Please clarify.")
+    
 
 
 #note
