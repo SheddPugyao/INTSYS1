@@ -261,7 +261,7 @@ enrollment_data = [
         }
     },
     {
-        "course": ["Associate in Computer Technology", "ACT"],
+        "course": ["Applied Software Engineering", "ASE"],
         "subjects": {
             "first year first semester": [
                 "INTRCS1 - Introduction to Computing Systems",
@@ -355,9 +355,9 @@ enrollment_process_data = [
         "steps": [
             "Welcome back! Here's how you enroll:",
             " > Settle back accounts (if any). Request account clearance and re-activation through the Online Activation and Resetting of Accounts Form(https://docs.google.com/forms/d/e/1FAIpQLSf5-LcVLxiZGe5FGBXi5LxpXO7s7v0QZ1vjQ29iUds1TZQWGw/viewform).",
-            " > Email the Dean's office for re-evaluation of courses and curriculum. \n\t- If the dean has queries, he/she may email you for clarification.",
+            " > Email the Dean's office for re-evaluation of courses and curriculum. \n     - If the dean has queries, he/she may email you for clarification.",
             " > If there are no concerns, the Dean/Secretary/Enrollment adviser encodes the required courses.",
-            " > Pay the the required down payment in any of the accredited banks or at the UB Cashier.\n\t- For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/).",
+            " > Pay the the required down payment in any of the accredited banks or at the UB Cashier.\n     - For more detailed instructions, you may check the Payment Procedures(https://ubaguio.edu/payment-procedures/).",
             " > Upload the scanned copy of the proof of payment to the Online Payment Verification Form(https://docs.google.com/forms/d/e/1FAIpQLSeeaC_ZJlHOJfmXoXnwczJATehmGvK_hQWrA5PsVkwlahSPxA/viewform).",
             " > Check your schedule on the Student Portal(https://portal.ubaguio.edu/)."
         ]
@@ -371,7 +371,7 @@ enrollment_process_data = [
             " > Transfer Credential",
             " > Copy of Grades", 
             " > Certificate of Good Moral Character", 
-            " > Photocopy of PSA Birth Certificate \n\t- Note: Students born abroad should submit a photocopy of Philippine Passport(Bio-page) or Philippine Recognition Certificate. ", 
+            " > Photocopy of PSA Birth Certificate \n     - Note: Students born abroad should submit a photocopy of Philippine Passport(Bio-page) or Philippine Recognition Certificate. ", 
             " > PSA Marriage Certificate (for married female students)",
         ]
     },
@@ -424,11 +424,12 @@ enrollment_process_data = [
             "BSCS - Bachelor of Science in Computer Science",
             "BSCOE - Bachelor of Science in Computer Engineering",
             "BSIT - Bachelor of Science in Information Technology",
-            "ACT - Associate in Computer Technology",
+            "ASE - Applied Software Engineering",
             "ACT-MWD - Associate in Computer Technology with Specialization in Multimedia"
         ]
     }
 ]
+
 
 # DATA FOR DISPLAYING ALL COURSE/SUBJECTS DEPENDING ON THE SPECIFIED PROGRAM
 all_course = [
@@ -690,11 +691,26 @@ all_course = [
                 "CWORLD1 - The Contemporary World",
                 "NSTPRO2 - National Service Training Program 2",
                 "PATHFT2 - Exercise-based Fitness Activities"
-            ]
+            ],
+            "2ND YEAR 1ST SEMESTER": [
+                "DSALGO1 - Data Structures and Algorithms",
+                "PRPCOM1 - Purposive Communication",
+                "ACTIMD1 - Database System",
+                "ACTSCR1 - Script Writing and Story Board Design",
+                "ACTANI1 - Principles of 2D Animation",
+                "LRIZAL1 - Life and Works of Jose Rizal",
+                "PATHFT3D - Bowling"
+            ],
+            "2ND YEAR 2ND SEMESTER": [
+                "ACTOJT1 - Internship",
+                "ACTGUI1 - GUI-based Applications Development",
+                "PATFT4A - Basketball/Volleyball"
+            ],
         }
     },
+    # Note: get subjects data for ase and update this
     {
-        "course": ["Associate in Computer Technology", "ACT"],
+        "course": ["Applied Software Engineering", "ASE"],
         "subjects": {
             "1ST YEAR 1ST SEMESTER": [
                 "INTRCS1 - Introduction to Computing Systems",
@@ -719,5 +735,29 @@ all_course = [
             ]
         }
     }
-
 ]
+
+# COURSE DESC
+course_description = [
+    {
+        "about": ["what is BSCS", "bscs all about"],
+        "desc": "Bachelor of Science in Computer Science \n- The BS Computer Science is a 4-year program that includes the study of computing concepts and theories, algorithmic foundations, and new developments in computing. The program prepares students to design and create algorithmically complex software and develop new and effective algorithms for solving computing problems.\n"
+    },
+    {
+        "about": ["what is BSCOE", "bscoe all about"],
+        "desc": "Bachelor of Science in Computer Engineering \n- The BS in Computer Engineering is a 4 year program that embodies the science and technology of design, development, implementation, maintenance and integration of software and hardware components in modern computing systems and computer-controlled equipment.\n"
+    },
+    {
+        "about": ["what is BSIT", "bsit all about"],
+        "desc": "Bachelor of Science in Information Technology\n- The BS Information Technology is a 4 year program that includes the study of the utilization of both hardware and software technologies involving planning, installing, customizing, operating, managing, and administering, and maintaining information technology infrastructure that provides computing solutions to address the needs of an organization.\n"
+    },
+    {
+        "about": ["what is ASE", "ase all about"],
+        "desc": "Applied Software Engineering\n- Applied Software Engineering is a work-study program that fosters multidisciplinary software development skills. It integrates modern technologies like Data Science, Machine Learning, Artificial Intelligence, and Natural Language Processing with small to medium-scale enterprise application development.\n"
+    },
+    {
+        "about": ["what is ACT-MWD", "act-mwd all about"],
+        "desc": "Associate in Computer Technology with Specialization in Multimedia\n- The Computer Technology program with Multimedia and Web Design specialization trains students in computer programming and creative multimedia skills for the industry. Graduates are prepared to pursue TESDA or IT industry certifications.\n"
+    }
+]
+

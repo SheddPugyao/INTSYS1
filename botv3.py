@@ -2,25 +2,33 @@ from rich.console import Console
 from rich.table import Table
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-from test_data import enrollment_data, enrollment_process_data, all_course
+from test_data import enrollment_data, enrollment_process_data, all_course, course_description
 
 bot = ChatBot('EnrollmentBot')
 
 trainer = ListTrainer(bot)
 
-# Train the bot
-for course in enrollment_data:
-    for semester, subjects in course["subjects"].items():
-        trainer.train(subjects)
+# Concatenate all subjects from enrollment_data and all_course into a single list
+all_subjects = []
+for course_data in enrollment_data + all_course:
+    for subjects in course_data["subjects"].values():
+        all_subjects.extend(subjects)
 
-for courseall in all_course:
-    for semester, subjects in courseall["subjects"].items():
-        trainer.train(subjects)
+# Concatenate all course descriptions into a single list
+all_descriptions = [desc["desc"] for desc in course_description]
 
+# Train the bot with all subjects
+trainer.train(all_subjects)
+
+# Train the bot with all course descriptions
+trainer.train(all_descriptions)
+
+# Train the bot with enrollment process steps
 for process in enrollment_process_data:
     trainer.train(process["steps"])
 
 console = Console()
+
 
 while True:
     user_input = input("You: ").lower()
@@ -59,12 +67,12 @@ while True:
                 if course.lower() in user_input:
                     program_input = course  # Set program_input to the matched course
                     response_all = course_all_data["subjects"]
-                    header = f"{course} - All Subjects"
+                    header = f"{course}"
                     break
 
     # Display subjects or enrollment process
     if response:
-        bot_response = f"EnrollmentBot: Here's the {header.lower()}:"
+        bot_response = f"EnrollmentBot: Here's the {header}:"
         console.print(bot_response)
         table = Table(show_header=True)
         table.add_column(header) 
@@ -75,14 +83,13 @@ while True:
         console.print(table)
 
     elif response_all:
-        bot_response = "EnrollmentBot: Here are all the subjects for"
+        bot_response = f"EnrollmentBot: Here are the subjects offered under {header}:"
         console.print(bot_response)
         console = Console()
         if program_input:  # Check if the user requested subjects for a specific program
-            print(f"{program_input.upper()}:")
-            header = f"{program_input.upper()} - All Subjects"
+            header = f"{program_input.upper()}"
         else:
-            print("All Subjects:")
+            print("All Subjetcs:")
         
         table = Table(show_header=True)
         table.add_column("Semester", style="cyan")
@@ -102,8 +109,6 @@ while True:
     else:
         print("Bot: I'm sorry, I couldn't find information for that query. Please clarify.")
 
-
-
 #note
 # query must only have this structure for year and sem: {first/second/third/fourth} year {first/seond} semester
 # query must only have this structure for course: CS/IT/COE/ or yung full
@@ -111,4 +116,5 @@ while True:
 
 
 # Is there a way to optimize test_data.py? Naulit kasi yung enrollment_data tapos all_course
-
+# Pa add nga yung entrance exam tapos tuition fee query
+# ayaw lumabas nung course description
