@@ -3,7 +3,6 @@ enrollment_data = [
         "course": ["Computer Science", "CS"],
         "subjects": {
             "first year first semester": [
-                "1ST YEAR 1ST SEMESTER - CS",
                 "INTRCS1 - Introduction to Computing Systems",
                 "PLFORM1 - Program Logic Formulation",
                 "THSELF1 - Understanding the Self",
@@ -15,7 +14,6 @@ enrollment_data = [
                 "SOCORN2 - Social Orientation"
             ],
             "first year second semester": [
-                "1ST YEAR 2ND SEMESTER - CS",
                 "SITNET1 - Networks and Communications",
                 "PROGIT1 - Computer Programming",
                 "HUMCOM1 - Human Computer Interaction",
@@ -27,7 +25,6 @@ enrollment_data = [
                 "PATHFT2 - Exercise-based Fitness Activities"
             ],
             "second year first semester": [
-                "2ND YEAR 1ST SEMESTER - CS",
                 "IMDBSE1 - Information Management and Database System",
                 "PROGIT2 - Object-Oriented Programming",
                 "APPDEV1 - Introduction to Applications Development",
@@ -38,7 +35,6 @@ enrollment_data = [
                 "PATHFT3D - Bowling"
             ],
             "second year second semester": [
-                "2ND YEAR 2ND SEMESTER - CS",
                 "IMDBSE2 - Advanced Database Systems",
                 "ENGGSF1 - Software Engineering 1",
                 "INASSE1 - Informations Assurance and Security",
@@ -49,7 +45,6 @@ enrollment_data = [
                 "PATFT4A - Basketball/Volleyball"
             ],
             "third year first semester": [
-                "3RD YEAR 1ST SEMESTER - CS",
                 "GAMDES1 - Introduction to Game Design and Development",
                 "WEBSYS2 - Web Systems and Technologies 2",
                 "ENGGSF2 - Software Engineering 2",
@@ -59,7 +54,6 @@ enrollment_data = [
                 "AUTHFL1 - Automata Theory and Formal Languages"
             ],
             "third year second semester": [
-                "3RD YEAR 2ND SEMESTER - CS",
                 "CMARCH1 - Computer Architecture and Organization",
                 "QASSUR1 - Quality Assurance",
                 "MOBCOM1 - Mobile Computing",
@@ -69,7 +63,6 @@ enrollment_data = [
                 "DATSCI1 - Introduction to Data Science"
             ],
             "fourth year first semester": [
-                "4TH YEAR 1ST SEMESTER - CS",
                 "SOPRAC1 - Social Issues and Professional Practice",
                 "EMTECH1 - Emerging Technologies",
                 "THESCS2 - CS Thesis Writing 2",
@@ -78,7 +71,6 @@ enrollment_data = [
                 "ARTAPP1 - Art Appreciation"
             ],
             "fourth year second semester": [
-                "4TH YEAR 2ND SEMESTER - CS"
                 "BCSOJT1 - Practicum (490 hours)"
             ]
         }
@@ -87,7 +79,6 @@ enrollment_data = [
         "course": ["Computer Engineering", "COE"],
         "subjects": {
             "first year first semester": [
-                "1ST YEAR 1ST SEMESTER - COE",
                 "CHMENG1 - Chemistry for Engineers",
                 "DIFCAL1 - Calculus 1",
                 "CPEPRO1 - Programming Logic and Design",
@@ -101,7 +92,6 @@ enrollment_data = [
                 "SOCORN2 - Social Orientation"
             ],
             "first year second semester": [
-                "1ST YEAR 2ND SEMESTER - COE",
                 "INTCAL1 - Calculus 2",
                 "CPEPHS1 - Physics for Engineering",
                 "DISMAT1 - Discrete Mathematics",
@@ -112,7 +102,6 @@ enrollment_data = [
                 "PATHFT2 - Exercise-based Fitness Activities"
             ],
             "second year first semester": [
-                "2ND YEAR 1ST SEMESTER - COE",
                 "ENVCPE1 - Environmental Science and Engineering",
                 "ENGMAT7 - Differential Equations",
                 "CIRCPE1 - Fundamentals of Electrical Circuits",
@@ -125,7 +114,6 @@ enrollment_data = [
                 "PATHFT3D - Bowling"
             ],
             "second year second semester": [
-                "2ND YEAR 2ND SEMESTER - COE",
                 "CPENUM1 - Numerical Methods",
                 "ELECPE1 - Fundamentals of Electronic Circuits",
                 "IMDBSE1 - Information Management and Database Systems",
@@ -136,7 +124,6 @@ enrollment_data = [
                 "PATHFT4A - Basketball/Volleyball"
             ],
             "third year first semester": [
-                "3RD YEAR 1ST SEMESTER - COE",
                 "CNTCPE1 - Feedback and Control System",
                 "LOGCPE1 - Logic Circuit and Design",
                 "COMCPE1 - Data and Digital Communications",
@@ -148,7 +135,6 @@ enrollment_data = [
                 "RPHIST1 - Readings in Philippine History"
             ],
             "third year second semester": [
-                "3RD YEAR 2ND SEMESTER - COE",
                 "CPESAF1 - Basic Occupational Health and Safety",
                 "DIGISP1 - Digital Signal Processing",
                 "MROCPE1 - Microprocessors",
@@ -159,7 +145,6 @@ enrollment_data = [
                 "GELECT2 - General Elective 2 (Gender and Society)"
             ],
             "fourth year first semester": [
-                "4TH YEAR 1ST SEMESTER - COE",
                 "CPEMRG1 - Emerging Technologies in CpE",
                 "GELECT3 - General Elective 3 (People and Earth's Ecosystem)",
                 "PROCPE1 - CpE Practice and Design 1",
@@ -170,7 +155,6 @@ enrollment_data = [
                 "PLDTRP1 - Seminars and Fieldtrips"
             ],
             "fourth year second semester": [
-                "4TH YEAR 2ND SEMESTER - COE",
                 "PROCPE2 - CpE Practice and Design 2",
                 "OJTCPE1 - Practicum (369 hrs)"
             ]
@@ -180,7 +164,6 @@ enrollment_data = [
         "course": ["Information Technology", "IT"],
         "subjects": {
             "first year first semester": [
-                "1ST YEAR 1ST SEMESTER - IT",
                 "INTRCS1 - Introduction to Computing Systems",
                 "PLFORM1 - Program Logic Formulation",
                 "THSELF1 - Understanding the Self",
@@ -193,7 +176,6 @@ enrollment_data = [
                 "SOCORN2 - Social Orientation"
             ],
             "first year second semester": [
-                "1ST YEAR 2ND SEMESTER - IT",
                 "SITNET1 - Networks and Communications",
                 "PROGIT1 - Computer Programming",
                 "HUMCOM1 - Human Computer Interaction",
@@ -204,7 +186,6 @@ enrollment_data = [
                 "PATHFT2 - Exercise-based Fitness Activities"
             ],
             "second year first semester": [
-                "2ND YEAR 1ST SEMESTER - IT",
                 "SITNET2 - Routing and Switching Technologies",
                 "OPSYST1 - Operating System",
                 "PROGIT2 - Object-oriented Programming",
@@ -214,7 +195,6 @@ enrollment_data = [
                 "PATFT3D - Bowling"
             ],
             "second year second semester": [
-                "2ND YEAR 2ND SEMESTER - IT",
                 "SITNET3 - Scaling Networks",
                 "IMDBSE1 - Information Management and Database Systems",
                 "SERADM1 - Server Administrator",
@@ -225,7 +205,6 @@ enrollment_data = [
                 "PATFT4A - Basketball/Volleyball"
             ],
             "third year first semester": [
-                "3RD YEAR 1ST SEMESTER - IT",
                 "CERTIF1 - Certification Exam",
                 "WEBSYS1 - Web System and Technologies 1",
                 "IMDBSE2 - Advanced Database System",
@@ -237,7 +216,6 @@ enrollment_data = [
                 "METHOD1 - Methods of Research"
             ],
             "third year second semester": [
-                "3RD YEAR 2ND SEMESTER - IT",
                 "CMARCH1 - Computer Architecture and Organization",
                 "ITMGNT1 - Project Management",
                 "INASEC2 - Information Assurance and Security 2",
@@ -246,7 +224,6 @@ enrollment_data = [
                 "LRIZAL1 - Life and Works of Jose Rizal"
             ],
             "fourth year first semester": [
-                "4TH YEAR 1ST SEMESTER - IT",
                 "SOPRAC1 - Social Issues and Professional Practice",
                 "EMTECH1 - Emerging Technologies",
                 "THESIT2 - Capstone Project and Research 2",
@@ -254,7 +231,6 @@ enrollment_data = [
                 "ARTAPP1 - Art Appreciation"
             ],
             "fourth year second semester": [
-                "4TH YEAR 2ND SEMESTER - IT",
                 "BITOJT1 - Practicum(490 hours)"
             ]
         }
@@ -263,7 +239,6 @@ enrollment_data = [
         "course": ["Multimedia and Web Design", "ACT-MWD"],
         "subjects": {
             "first year first semester": [
-                "1ST YEAR 1ST SEMESTER - ACT-MWD",
                 "INTRCS1 - Introduction to Computing Systems",
                 "PROPHY1 - Computer Programming 1",
                 "ARTAPP1 - Art Appreciation",
@@ -275,7 +250,6 @@ enrollment_data = [
                 "SOCORN2 - Social Orientation"
             ],
             "first year second semester": [
-                "1ST YEAR 2ND SEMESTER - ACT-MWD",
                 "PROPHY2 - Object-Oriented Programming with Flask",
                 "ACTSOP1 - Professional Issues in Computing",
                 "ACTGRH1 - Graphics Design",
@@ -290,7 +264,6 @@ enrollment_data = [
         "course": ["Associate in Computer Technology", "ACT"],
         "subjects": {
             "first year first semester": [
-                "1ST YEAR 1ST SEMESTER - ACT",
                 "INTRCS1 - Introduction to Computing Systems",
                 "PLFORM1 - Program Logic Formulation",
                 "THSELF1 - Understanding the Self",
@@ -302,7 +275,6 @@ enrollment_data = [
                 "SOCORN1 - Social Orientation"
             ],
             "first year second semester": [
-                "1ST YEAR 2ND SEMESTER - ACT",
                 "SITNET1 - Networks and Communications",
                 "PROGIT1 - Computer Programming",
                 "HUMCOM1 - Human Computer Interaction",
