@@ -37,7 +37,8 @@ console = Console()
 def handle_user_input(user_input, console):
     response = None
     response_all = None
-    program_input = None  # Initialize program_input
+    program_input = None
+    other_response = None  # Initialize other_response
 
     greetings = ["hi", "hello", "hey"]
     if user_input in greetings:
@@ -65,6 +66,7 @@ def handle_user_input(user_input, console):
         for desc in course_data["about"]:
             if desc.lower() in user_input:
                 response = course_data["desc"]
+                header = "Program Description"
     
 
     # Check for subjects
@@ -102,7 +104,8 @@ def handle_user_input(user_input, console):
         elif "enrollment" in user_input:
             header = "Enrollment Process"
         else:
-            header = "Course Description"
+            header = f"{header}"
+
         bot_response = f"EnrollEase:"
         console.print(bot_response)
         table = Table(show_header=True)
