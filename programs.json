@@ -1,0 +1,9 @@
+{
+	"programs": {
+		"BSCS": "Bachelor of Science in Computer Science",
+		"BSCOE": "Bachelor of Science in Computer Engineering",
+		"BSIT": "Bachelor of Science in Information Technology",
+		"ACT": "Associate in Computer Technology",
+		"ACT-MWD": "Associate in Computer Technology with Specialization in Multimedia"
+	}
+}

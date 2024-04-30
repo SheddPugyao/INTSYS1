@@ -1,0 +1,542 @@
+{
+	"courses": {
+		"CS": {
+			"first year": {
+				"first_sem": [
+					{ "subject": "INTRCS1", "desc": "Introduction to Computing Systems" },
+					{ "subject": "PLFORM1", "desc": "Program Logic Formulation" },
+					{ "subject": "THSELF1", "desc": "Understanding the Self" },
+					{ "subject": "RPHIST1", "desc": "Reading in Philippine History" },
+					{ "subject": "MATHMW1", "desc": "Mathematics in the Modern World" },
+					{ "subject": "PRPCOM1", "desc": "Purposive Communication" },
+					{
+						"subject": "NSTPRO1",
+						"desc": "National Service Training Program 1"
+					},
+					{
+						"subject": "HCORDI1",
+						"desc": "Cordillera: History and Socio-Cultural Heritage"
+					},
+					{ "subject": "SOCORN2", "desc": "Social Orientation" }
+				],
+				"second_sem": [
+					{ "subject": "SITNET1", "desc": "Networks and Communications" },
+					{ "subject": "PROGIT1", "desc": "Computer Programming" },
+					{ "subject": "HUMCOM1", "desc": "Human Computer Interaction" },
+					{ "subject": "DITRUC1", "desc": "Discrete Structures 1" },
+					{ "subject": "SCITES1", "desc": "Science, Technology, and Society" },
+					{ "subject": "OPSYST1", "desc": "Operating Systems" },
+					{ "subject": "CWORLD1", "desc": "The Contemporary World" },
+					{
+						"subject": "NSTPRO2",
+						"desc": "National Service Training Program 2"
+					},
+					{ "subject": "PATHFT2", "desc": "Exercise-based Fitness Activities" }
+				]
+			},
+			"second year": {
+				"first_sem": [
+					{
+						"subject": "IMDBSE1",
+						"desc": "Information Management and Database System"
+					},
+					{ "subject": "PROGIT2", "desc": "Object-Oriented Programming" },
+					{
+						"subject": "APPDEV1",
+						"desc": "Introduction to Applications Development"
+					},
+					{ "subject": "ITMGNT", "desc": "Project Management" },
+					{ "subject": "DITRUC2", "desc": "Discrete Structures 2" },
+					{ "subject": "DSALGO1", "desc": "Data Structures and Algorithms" },
+					{ "subject": "GETHCS1", "desc": "Ethics" },
+					{ "subject": "PATHFT3D", "desc": "Bowling" }
+				],
+				"second_sem": [
+					{ "subject": "IMDBSE2", "desc": "Advanced Database Systems" },
+					{ "subject": "ENGGSF1", "desc": "Software Engineering 1" },
+					{
+						"subject": "INASSE1",
+						"desc": "Informations Assurance and Security"
+					},
+					{ "subject": "WEBSYS1", "desc": "Web Systems and Technologies 1" },
+					{ "subject": "ALGCOM1", "desc": "Algorithm and Complexity" },
+					{ "subject": "ENGMAT9", "desc": "Probability and Statistics" },
+					{
+						"subject": "GELECT2",
+						"desc": "General Elective 2 (Gender and Society)"
+					},
+					{ "subject": "PATFT4A", "desc": "Basketball/Volleyball" }
+				]
+			},
+			"third year": {
+				"first_sem": [
+					{
+						"subject": "GAMDES1",
+						"desc": "Introduction to Game Design and Development"
+					},
+					{ "subject": "WEBSYS2", "desc": "Web Systems and Technologies 2" },
+					{
+						"subject": "ENGGSF2",
+						"desc": "Software Engineering 2"
+					},
+					{ "subject": "INTSYS1", "desc": "Intelligent Systems" },
+					{ "subject": "DIGDES1", "desc": "Digital Design" },
+					{ "subject": "METHOD1", "desc": "Methods of Research" },
+					{
+						"subject": "AUTHFL1",
+						"desc": "Automata Theory and Formal Languages"
+					}
+				],
+				"second_sem": [
+					{
+						"subject": "CMARCH1",
+						"desc": "Computer Architecture and Organization"
+					},
+					{ "subject": "QASSUR1", "desc": "Quality Assurance" },
+					{
+						"subject": "MOBCOM1",
+						"desc": "Mobile Computing"
+					},
+					{
+						"subject": "PPLANG1",
+						"desc": "Principles of Programming Languages"
+					},
+					{ "subject": "ENTECH1", "desc": "Technopreneurship" },
+					{ "subject": "THESCS1", "desc": "CS Thesis Writing 1" },
+					{
+						"subject": "DATSCI1",
+						"desc": "Introduction to Data Science"
+					}
+				]
+			},
+			"fourth year": {
+				"first_sem": [
+					{
+						"subject": "SOPRAC1",
+						"desc": "Social Issues and Professional Practice"
+					},
+					{ "subject": "EMTECH1", "desc": "Emerging Technologies" },
+					{
+						"subject": "THESCS2",
+						"desc": "CS Thesis Writing 2"
+					},
+					{ "subject": "LRIZAL1", "desc": "life and Works of Jose Rizal" },
+					{
+						"subject": "GELECT3",
+						"desc": "General Elective 3 (People and the Earth's Ecosystem)"
+					},
+					{ "subject": "ARTAPP1", "desc": "Art Appreciation" }
+				],
+				"second_sem": [
+					{ "subject": "BCSOJT1", "desc": "Practicum (490 hours)" }
+				]
+			}
+		},
+		"COE": {
+			"first year": {
+				"first_sem": [
+					{ "subject": "CHMENG1", "desc": "Chemistry for Engineers" },
+					{ "subject": "DIFCAL1", "desc": "Calculus 1" },
+					{ "subject": "CPEPRO1", "desc": "Programming Logic and Design" },
+					{
+						"subject": "COMDIS1",
+						"desc": "Computer Engineering as a Discipline"
+					},
+					{ "subject": "THSELF1", "desc": "Understanding the World" },
+					{ "subject": "PRPCOM1", "desc": "Purposive Communication" },
+					{ "subject": "MATHMW1", "desc": "Mathematics in the Modern World" },
+					{
+						"subject": "NSTPRO1",
+						"desc": "National Service Training Program 1"
+					},
+					{
+						"subject": "HCRODI1",
+						"desc": "Cordillera: History and Socio-Cultural Heritage"
+					},
+					{ "subject": "PATHFT1", "desc": "Movement Competency Training" },
+					{ "subject": "SOCORN2", "desc": "Social Orientation" }
+				],
+				"second_sem": [
+					{ "subject": "INTCAL1", "desc": "Calculus 2" },
+					{ "subject": "CPEPHS1", "desc": "Physics for Engineering" },
+					{ "subject": "DISMAT1", "desc": "Discrete Mathematics" },
+					{ "subject": "CPEPRO2", "desc": "Object-oriented Programming" },
+					{
+						"subject": "CPENET1",
+						"desc": "Intro. to Networks and Data Communication"
+					},
+					{
+						"subject": "SCITES1",
+						"desc": "Science, Technology, Engg and Society"
+					},
+					{
+						"subject": "NSTPRO2",
+						"desc": "National Service Training Program 2"
+					},
+					{ "subject": "PATHFT2", "desc": "Excercise-based Fitness Activities" }
+				]
+			},
+			"second year": {
+				"first_sem": [
+					{
+						"subject": "ENVCPE1",
+						"desc": "Environmental Science and Engineering"
+					},
+					{ "subject": "ENGMAT7", "desc": "Differential Equations" },
+					{
+						"subject": "CIRCPE1",
+						"desc": "Fundamentals of Electrical Circuits"
+					},
+					{ "subject": "DATALG1", "desc": "Data Structures and Algorithms" },
+					{
+						"subject": "SITNET2",
+						"desc": "Routing and Switching Technologies"
+					},
+					{ "subject": "CADCPE1", "desc": "Computer-Aided Drafting" },
+					{ "subject": "ENGECO1", "desc": "Engineering Economy" },
+					{ "subject": "LRIZAL1", "desc": "Life and Works of Rizal" },
+					{ "subject": "CWORLD1", "desc": "The Contemporary World" },
+					{ "subject": "PATHFT3D", "desc": "Bowling" }
+				],
+				"second_sem": [
+					{ "subject": "CPENUM1", "desc": "Numerical Methods" },
+					{
+						"subject": "ELECPE1",
+						"desc": "Fundamentals of Electronic Circuits"
+					},
+					{
+						"subject": "IMDBSE1",
+						"desc": "Information Management and Database Systems"
+					},
+					{ "subject": "CPEOPR1", "desc": "Operating Systems" },
+					{ "subject": "SITNET3", "desc": "Scaling Networks" },
+					{ "subject": "GETHICS1", "desc": "Ethics" },
+					{ "subject": "ARTAPP1", "desc": "Art Apppreciation" },
+					{ "subject": "PATHFT4A", "desc": "Basketball/Volleyball" }
+				]
+			},
+			"third year": {
+				"first_sem": [
+					{ "subject": "CNTCPE1", "desc": "Feedback and Control System" },
+					{ "subject": "LOGCPE1", "desc": "Logic Circuit and Design" },
+					{ "subject": "COMCPE1", "desc": "Data and Digital Communications" },
+					{
+						"subject": "MIXCPE1",
+						"desc": "Fundamentals of Mixed Signals and Sensors"
+					},
+					{
+						"subject": "CADCPE2",
+						"desc": "Computer Engineering Drafting and Design"
+					},
+					{ "subject": "MICCPE1", "desc": "Microelectronics 1" },
+					{
+						"subject": "HDLCPE1",
+						"desc": "Intro. To Hardware Description Language"
+					},
+					{ "subject": "CPESOF1", "desc": "Software Design" },
+					{ "subject": "RPHIST1", "desc": "Readings in Philippine History" }
+				],
+				"second_sem": [
+					{
+						"subject": "CPESAF1",
+						"desc": "Basic Occupational Health and Safety"
+					},
+					{ "subject": "DIGISP1", "desc": "Digital Signal Processing" },
+					{ "subject": "MROCPE1", "desc": "Microprocessors" },
+					{ "subject": "MICCPE2", "desc": "Microelectronics 2" },
+					{ "subject": "CPEMET1", "desc": "Methods of Research" },
+					{ "subject": "ENTECH1", "desc": "Technopreneurship" },
+					{ "subject": "CPELAW1", "desc": "CPE Laws and rofessional Practice" },
+					{
+						"subject": "GELECT2",
+						"desc": "General Elective 2 (Gender and Society)"
+					}
+				]
+			},
+			"fourth year": {
+				"first_sem": [
+					{ "subject": "CPEMRG1", "desc": "Emerging Technologies in CpE" },
+					{
+						"subject": "GELECT3",
+						"desc": "General Elective 3 (People and Earth's Ecosystem)"
+					},
+					{ "subject": "PROCPE1", "desc": "CpE Practice and Design 1" },
+					{ "subject": "EMBCPE1", "desc": "Embedded Systems" },
+					{
+						"subject": "COWASM1",
+						"desc": "Computer Architecture and Organization"
+					},
+					{ "subject": "MICCPE3", "desc": "Microelectronics 3" },
+					{ "subject": "CPEMGT1", "desc": "Engineering Management" },
+					{ "subject": "PLDTRP1", "desc": "Seminars and Fieldtrips" }
+				],
+				"second_sem": [
+					{ "subject": "PROCPE2", "desc": "CpE Practice and Design 2" },
+					{ "subject": "OJTCPE1", "desc": "Practicum (360 hrs)" }
+				]
+			}
+		},
+		"IT": {
+			"first year": {
+				"first_sem": [
+					{ "subject": "INTRCS1", "desc": "Introduction to Computing Systems" },
+					{ "subject": "PLFORM1", "desc": "Program Logic Formulation" },
+					{ "subject": "THSELF1", "desc": "Understanding the Self" },
+					{ "subject": "RPHIST1", "desc": "Reading in Philippine History" },
+					{ "subject": "MATHMW1", "desc": "Mathematics in the Modern World" },
+					{ "subject": "PRPCOM1", "desc": "Purposive Communication" },
+					{
+						"subject": "NSTPRO1",
+						"desc": "National Service Training Program 1"
+					},
+					{
+						"subject": "PATHFT1",
+						"desc": "Movement Competency Training or MCT"
+					},
+					{
+						"subject": "HCORDI1",
+						"desc": "Cordillera: History and Socio-Cultural Heritage"
+					},
+					{ "subject": "SOCORN2", "desc": "Social Orientation" }
+				],
+				"second_sem": [
+					{ "subject": "SITNET1", "desc": "Networks and Communications" },
+					{ "subject": "PROGIT1", "desc": "Computer Programming" },
+					{ "subject": "HUMCOM1", "desc": "Human Computer Interaction" },
+					{ "subject": "DITRUC1", "desc": "Discrete Structures 1" },
+					{ "subject": "SCITES1", "desc": "Science, Technology, and Society" },
+					{ "subject": "CWORLD1", "desc": "The Contemporary World" },
+					{ "subject": "NSTPRO2", "desc": "National Service Training Program" },
+					{ "subject": "PATHFT2", "desc": "Exercise-based Fitness Activities" }
+				]
+			},
+			"second year": {
+				"first_sem": [
+					{
+						"subject": "SITNET2",
+						"desc": "Routing and Switching Technologies"
+					},
+					{ "subject": "OPSYST1", "desc": "Operating System" },
+					{ "subject": "PROGIT2", "desc": "Object-oriented Programming" },
+					{ "subject": "ENGMAT9", "desc": "Probability and Statistics" },
+					{
+						"subject": "DSALGO1",
+						"desc": "Data Structures and Algorithm Analysis"
+					},
+					{ "subject": "GETHCS1", "desc": "Ethics" },
+					{ "subject": "PATFT3D", "desc": "Bowling" }
+				],
+				"second_sem": [
+					{ "subject": "SITNET3", "desc": "Scaling Networks" },
+					{
+						"subject": "IMDBSE1",
+						"desc": "Information Management and Database Systems"
+					},
+					{ "subject": "SERADM1", "desc": "Server Administrator" },
+					{
+						"subject": "APPDEV1",
+						"desc": "Introduction to Application Development"
+					},
+					{
+						"subject": "SYSINT1",
+						"desc": "System Integration and Agriculture 1"
+					},
+					{
+						"subject": "GELECT2",
+						"desc": "General Elective 2 (Gender Society)"
+					},
+					{ "subject": "WNCOMP1", "desc": "Wireless and Mobile Computing" },
+					{ "subject": "PATFT4A", "desc": "Basketball/Volleyball" }
+				]
+			},
+			"third year": {
+				"first_sem": [
+					{ "subject": "CERTIF1", "desc": "Certification Exam" },
+					{ "subject": "WEBSYS1", "desc": "Web System and Technologies 1" },
+					{ "subject": "IMDBSE2", "desc": "Advanced Database System" },
+					{ "subject": "NETANA1", "desc": "Network Analysis and Design" },
+					{
+						"subject": "SYSADM1",
+						"desc": "System Administration and Maintenance"
+					},
+					{
+						"subject": "SYSINT2",
+						"desc": "System Integration and Architecture 2"
+					},
+					{
+						"subject": "INASEC1",
+						"desc": "Information Assurance and Security 1"
+					},
+					{ "subject": "ENTECH1", "desc": "Technopreneurship" },
+					{ "subject": "METHOD1", "desc": "Methods of Research" }
+				],
+				"second_sem": [
+					{
+						"subject": "CMARCH1",
+						"desc": "Computer Architecture and Organization"
+					},
+					{ "subject": "ITMGNT1", "desc": "Project Management" },
+					{
+						"subject": "INASEC2",
+						"desc": "Information Assurance and Security 2"
+					},
+					{ "subject": "THESIT1", "desc": "Capstone Project and Research 1" },
+					{ "subject": "NETPRO1", "desc": "Network Programming" },
+					{ "subject": "LRIZAL1", "desc": "Life and Works of Jose Rizal" }
+				]
+			},
+			"fourth year": {
+				"first_sem": [
+					{
+						"subject": "SOPRAC1",
+						"desc": "Social Issues and Professional Practice"
+					},
+					{ "subject": "EMTECH1", "desc": "Emerging Technologies" },
+					{ "subject": "THESIT2", "desc": "Capstone Project and Research 2" },
+					{
+						"subject": "GELECT3",
+						"desc": "General Elective 3 (People and the Earth's Ecosystem)"
+					},
+					{ "subject": "ARTAPP1", "desc": "Art Appreciation" }
+				],
+				"second_sem": [{ "subject": "BITOJT1", "desc": "Practicum(490 hours)" }]
+			}
+		},
+		"ACT-MWD": {
+			"first year": {
+				"first_sem": [
+					{ "subject": "INTRCS1", "desc": "Introduction to Computing Systems" },
+					{ "subject": "PROPHY1", "desc": "Computer Programming 1" },
+					{ "subject": "ARTAPP1", "desc": "Art Appreciation" },
+					{ "subject": "MATHMW1", "desc": "Mathematics in the Modern World" },
+					{ "subject": "ACTDRW1", "desc": "Freehand and Digital Drawing" },
+					{
+						"subject": "NSTPRO1",
+						"desc": "National Service Training Program 1"
+					},
+					{
+						"subject": "HCORDI1",
+						"desc": "Cordillera: History and Socio-Cultural Heritage"
+					},
+					{ "subject": "PATHFT1", "desc": "SMovement Competency Training" },
+					{ "subject": "SOCORN2", "desc": "Social Orientation" }
+				],
+				"second_sem": [
+					{
+						"subject": "PROPHY2",
+						"desc": "Object-Oriented Programming with Flask"
+					},
+					{ "subject": "ACTSOP1", "desc": "Professional Issues in Computing" },
+					{ "subject": "ACTGRH1", "desc": "Graphics Design" },
+					{ "subject": "ACTHUM1", "desc": "Web Design" },
+					{ "subject": "CWORLD1", "desc": "The Contemporary World" },
+					{
+						"subject": "NSTPRO2",
+						"desc": "National Service Training Program 2"
+					},
+					{ "subject": "PATHFT2", "desc": "Exercise-based Fitness Activities" }
+				]
+			},
+			"second year": {
+				"first_sem": [
+					{ "subject": "DSALGO1", "desc": "Data Structures and Algorithms" },
+					{
+						"subject": "PRPCOM1",
+						"desc": "Purposive Communication"
+					},
+					{ "subject": "ACTIMD1", "desc": "Database System" },
+					{
+						"subject": "ACTSCR1",
+						"desc": "Script Writing and Story Board Design"
+					},
+					{ "subject": "ACTANI1", "desc": "Principles of 2D Animation" },
+					{ "subject": "LRIZAL1", "desc": "Life and Works of Jose Rizal" },
+					{ "subject": "PATHFT3D", "desc": "Bowling" }
+				],
+				"second_sem": [
+					{
+						"subject": "ACTOJT1",
+						"desc": "Internship"
+					},
+					{
+						"subject": "ACTGUI1",
+						"desc": "GUI-based Applications Development"
+					},
+					{ "subject": "PATFT4A", "desc": "Basketball/Volleyball" }
+				]
+			}
+		},
+		"ACT": {
+			"first year": {
+				"first_sem": [
+					{ "subject": "INTRCS1", "desc": "Introduction to Computing Systems" },
+					{ "subject": "PLFORM1", "desc": "Program Logic Formulation" },
+					{ "subject": "THSELF1", "desc": "Understanding the Self" },
+					{ "subject": "ARTAPP1", "desc": "Art Appreciation" },
+					{ "subject": "MATHMW1", "desc": "Mathematics in the Modern World" },
+					{ "subject": "PRPCOM1", "desc": "Purposive Communication" },
+					{
+						"subject": "NSTPRO1",
+						"desc": "National Service Training Program 1"
+					},
+					{
+						"subject": "EDPHYS1",
+						"desc": "PE Elective 1"
+					},
+					{ "subject": "SOCORN1", "desc": "Social Orientation" }
+				],
+				"second_sem": [
+					{ "subject": "SITNET1", "desc": "Networks and Communications" },
+					{ "subject": "PROGIT1", "desc": "Computer Programming" },
+					{ "subject": "HUMCOM1", "desc": "Human Computer Interaction" },
+					{ "subject": "DITRUC1", "desc": "Discrete Structures 1" },
+					{ "subject": "DIGIMD1", "desc": "Digital Media 1" },
+					{ "subject": "CWORLD1", "desc": "The Contemporary World" },
+					{
+						"subject": "NSTPRO2",
+						"desc": "National Service Training Program 2"
+					},
+					{ "subject": "EDPHYS2", "desc": "PE Elective 2" }
+				]
+			},
+			"second year": {
+				"first_sem": [
+					{
+						"subject": "OPSYST1",
+						"desc": "Operating System"
+					},
+					{ "subject": "PROGIT2", "desc": "Object-Oriented Programming" },
+					{
+						"subject": "APPDEV1",
+						"desc": "Introduction to Applications Development"
+					},
+					{ "subject": "DSALGO1", "desc": "Data Structures and Algorithms" },
+					{
+						"subject": "FILPIN",
+						"desc": "Kontekstwalisadong Kumunikasyon sa Filipino"
+					},
+					{ "subject": "GETHCS1", "desc": "Ethics" },
+					{ "subject": "DIGIMD2", "desc": "Digital Media 2" }
+				],
+				"second_sem": [
+					{
+						"subject": "IMDBSE1",
+						"desc": "Information Management and Database Systems"
+					},
+					{ "subject": "WEBSYS1", "desc": "Web Systems and Technologies 1" },
+					{
+						"subject": "SYSINT1",
+						"desc": "System Integration and Architecture"
+					},
+					{ "subject": "SCITES1", "desc": "Science, Technology, and Society" },
+					{
+						"subject": "RPHIST1",
+						"desc": "Readings in Philippine History"
+					},
+					{ "subject": "ACTCER1", "desc": "ACT Certification" },
+					{ "subject": "ACTOJT1", "desc": "Practicum" }
+				]
+			}
+		}
+	}
+}
