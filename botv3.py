@@ -4,8 +4,10 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from test_data import enrollment_data, enrollment_process_data, all_course, course_description
 
-bot = ChatBot('EnrollmentBot')
+# Initialize ChatBot instance
+bot = ChatBot('EnrollEase')
 
+# Initialize ListTrainer
 trainer = ListTrainer(bot)
 
 # Concatenate all subjects from enrollment_data and all_course into a single list
@@ -29,14 +31,17 @@ for process in enrollment_process_data:
 
 console = Console()
 
-
-while True:
-    user_input = input("You: ").lower()
-    if user_input == 'exit':
-        break
+def handle_user_input(user_input, console):
     response = None
     response_all = None
     program_input = None  # Initialize program_input
+
+    # Check for greetings
+    greetings = ["hi", "hello", "hey"]
+    if user_input in greetings:
+        bot_response = "EnrollEase: Hi, I'm EnrollEase! How may I help you with the SIT Enrollment?"
+        console.print(bot_response)
+        return
 
     # Check for specific user input related to enrollment process
     for process_data in enrollment_process_data:
@@ -44,6 +49,7 @@ while True:
             if process.lower() in user_input:
                 response = process_data["steps"]
                 header = "Enrollment Process"
+                bot_response = f"EnrollEase: Here's the {header}:"
                 break
 
     # Check for subjects
@@ -72,7 +78,11 @@ while True:
 
     # Display subjects or enrollment process
     if response:
-        bot_response = f"EnrollmentBot: Here's the {header}:"
+        if "programs offered" in user_input:
+            header = "SIT Programs"
+        elif "admission requirements" in user_input:
+            header = "Admission Requirements"
+        bot_response = f"EnrollEase:"
         console.print(bot_response)
         table = Table(show_header=True)
         table.add_column(header) 
@@ -83,13 +93,12 @@ while True:
         console.print(table)
 
     elif response_all:
-        bot_response = f"EnrollmentBot: Here are the subjects offered under {header}:"
+        bot_response = f"EnrollEase: Here are the subjects offered under {header}:"
         console.print(bot_response)
-        console = Console()
         if program_input:  # Check if the user requested subjects for a specific program
             header = f"{program_input.upper()}"
         else:
-            print("All Subjetcs:")
+            print("All Subjects:")
         
         table = Table(show_header=True)
         table.add_column("Semester", style="cyan")
@@ -109,12 +118,43 @@ while True:
     else:
         print("Bot: I'm sorry, I couldn't find information for that query. Please clarify.")
 
-#note
-# query must only have this structure for year and sem: {first/second/third/fourth} year {first/seond} semester
-# query must only have this structure for course: CS/IT/COE/ or yung full
-# sample query: give me {first/second/third/fourth} year {first/seond} semester of IT
+def main():
+    while True:
+        user_input = input("You: ").lower()
+        if user_input == 'exit':
+            print("EnrollEase: Feel free to reach out for any further inquiries. Goodbye!")
+            break
+        handle_user_input(user_input, console)
 
+if __name__ == "__main__":
+    main()
 
-# Is there a way to optimize test_data.py? Naulit kasi yung enrollment_data tapos all_course
-# Pa add nga yung entrance exam tapos tuition fee query
-# ayaw lumabas nung course description
+# Queries:
+"""
+FOR SPECIFIC SUBJECTS:
+    > [program] [year] [semester] subjects|courses (e.g., Give me cs first year first semester subjects)
+
+FOR ALL SUBJECTS UNDER A SPECIFIC PROGRAM:
+    > [program] (e.g., All subjects for cs)
+
+FOR ENROLLMENT QUERIES: 
+- This can handle questions about 
+    > enrollment process|procedures|process
+    > enrollment process for returning student|transferee|current students
+    > admission requirements
+    > admission requirements for incoming freshmen|transferee 
+    > reservation for incoming freshmen
+    > enrollment deadline|date
+    > entrance exam (NOT YET ADDED)
+
+FOR PROGRAMS:
+    > programs offered (e.g., Give me programs offered under SIT)
+
+FOR TUITION FEE: (NOT YET ADDED)
+    > tuition fee (e.g., How much is the tuition fee for . . . )
+
+"""
+# Add entrance exam and tuition fee query
+# Update ASE info
+# Fix course description (it's not showing)
+# Can the greetings be added to the training set?
