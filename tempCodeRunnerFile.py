@@ -1,0 +1,1 @@
+ What are the subjects for Computer Science in the first semester of the first year?

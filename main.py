@@ -79,6 +79,7 @@ def get_process_steps(process, steps):
         for process in steps:
             table.add_row(process['steps'])
 
+<<<<<<< HEAD
         contact_table = Table(expand=True)
         contact_table.add_column("Contact US")
         contact_table.add_row(
@@ -86,6 +87,9 @@ def get_process_steps(process, steps):
 
         console.print(table)
         console.print(contact_table)
+=======
+        console.print(table)
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
     else:
         response = f"No procedure found for {steps} STUDENTS."
 
@@ -109,7 +113,11 @@ programs_keywords = {
     "CS": ["cs", "computer science", "compsci", "comsci", "bscs"],
     "COE": ["coe", "computer engineering", "comeng", "compeng", "comp eng", "bscoe"],
     "IT": ["it", "information technology", "info tech", "information tech", "bsit"],
+<<<<<<< HEAD
     "ASE": ["ase", "applied software engineering"],
+=======
+    "ACT": ["act", "associate in computer technology", "associate in comp tech"],
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
     "ACT-MWD": ["act-mwd", "associate in computer technology with specialization in multimedia", "associate in comp tech w specialization in multimedia", "mwd", "multimedia"]
 }
 
@@ -121,7 +129,11 @@ while True:
         print ("EnrollmentBot: For tuition fee information, please visit SIT Office, F Building, 2nd floor.")
     
     elif any(any(keyword in user_input.lower() for keyword in keywords) for keywords in programs_keywords.values()):
+<<<<<<< HEAD
         subject = next((subj for subj in ["COE", "CS", "IT", "ACT-MWD", "ASE"] if any(keyword in user_input.lower() for keyword in programs_keywords[subj])), None)
+=======
+        subject = next((subj for subj in ["COE", "CS", "IT", "ACT-MWD", "ACT"] if any(keyword in user_input.lower() for keyword in programs_keywords[subj])), None)
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
         if subject:
             # Fetch subjects from the JSON data
             subjects = subjects_data["courses"][subject]
@@ -155,6 +167,7 @@ while True:
                 
                 # SEPARATOR
                 table.add_row("", "", "", "")
+<<<<<<< HEAD
 
             contact_table = Table(expand=True)
             contact_table.add_column("Contact US")
@@ -166,6 +179,13 @@ while True:
         else:
             print("EnrollmentBot: I'm sorry, I couldn't find information about that subject.")
     elif any(keyword in user_input.lower() for keyword in ["sit programs","program", "programs offered"]):
+=======
+            
+            console.print(table)
+        else:
+            print("EnrollmentBot: I'm sorry, I couldn't find information about that subject.")
+    elif any(keyword in user_input.lower() for keyword in ["sit programs","programs", "programs offered"]):
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
         response = "EnrollmentBot: Here are the programs offered by the SIT department:\n"
         table = Table()
         table.add_column("Program", style="bold")
@@ -175,6 +195,7 @@ while True:
             table.add_row(program_code, description)
 
         console.print(response)
+<<<<<<< HEAD
         contact_table = Table(expand=True)
         contact_table.add_column("Contact US")
         contact_table.add_row(
@@ -182,6 +203,9 @@ while True:
 
         console.print(table)
         console.print(contact_table)
+=======
+        console.print(table)
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
 
     elif "process" and any(keyword in user_input.lower() for keyword in ["procedure", "steps", "process"]):
         print("For which enrollment process would you like to know more?\n > Current Student\n > Incoming Student\n > Returning Student\n > Transferees")
@@ -205,6 +229,7 @@ while True:
                 for item in enrollment_response:
                     for key, value in item.items():
                         table.add_row(key, value)
+<<<<<<< HEAD
                 contact_table = Table(expand=True)
                 contact_table.add_column("Contact US")
                 contact_table.add_row(
@@ -212,12 +237,20 @@ while True:
 
                 console.print(table)
                 console.print(contact_table)
+=======
+                console.print(table)
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
             else:
                 print("EnrollmentBot:", enrollment_response)
         else:
             response = chatbot.get_response(user_input)
             print("EnrollmentBot:", response)
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
 #------------------------------------------------------------------------------------------
 # SCOPE: 
     # Programs offered
@@ -229,7 +262,14 @@ while True:
     # Tuition fee inquiry
     # Unrelated SIT inquiries
     # Description for each subjects
+<<<<<<< HEAD
     # Description for each programs(ADDED)
 
 # TO FIX:
     # Change ACT to ASE; iba yung nakuha na data(DONE - except for the curriculum)
+=======
+    # Description for each programs
+
+# TO FIX:
+    # Change ACT to ASE; iba yung nakuha na data
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2

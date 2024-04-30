@@ -466,7 +466,11 @@
 				]
 			}
 		},
+<<<<<<< HEAD
 		"ASE": {
+=======
+		"ACT": {
+>>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
 			"first year": {
 				"first_sem": [
 					{ "subject": "INTRCS1", "desc": "Introduction to Computing Systems" },

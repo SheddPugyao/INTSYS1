@@ -1,11 +1,4 @@
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
-<<<<<<< HEAD
-
-# Create a new instance of a ChatBot
-bot = ChatBot('EnrollmentBot')
-
-enrollment_data = [
+enrollment_queries = [
     # CS Courses
     "What are the subjects for Computer Science in the first semester of the first year?",
     "The subjects for Computer Science in the first semester of the first year are: INTRCS1 - Introduction to Computing Systems, PLFORM1 - Program Logic Formulation, THSELF1 - Understanding the Self, RPHIST1 - Reading in Philippine History, MATHMW1 - Mathematics in the Modern World, PRPCOM1 - Purposive Communication, NSTPRO1 - National Service Training Program 1, HCORDI1 - Cordillera: History and Socio-Cultural Heritage, SOCORN2 - Social Orientation.",
@@ -72,50 +65,29 @@ enrollment_data = [
     "The subjects for Associate in Computer Technology in the second semester of the first year are: SITNET1 - Networks and Communications, PROGIT1 - Computer Programming, HUMCOM1 - Human Computer Interaction, DITRUC1 - Discrete Structures 1, DIGIMD1 - Digital Media 1, CWORLD1 - The Contemporary World, NSTPRO2 - National Service Training Program 2, EDPHYS2 - PE Elective 2."
 ]
 
+process_one = [
+    "Hi, I'm a new student. How do I enroll for courses?",
+    "Welcome! Here are the steps for enrollment. newline1. Check the schedule of enrollment posted on the UB Website and official Facebook page. newline2. Log in to the UB student portal with your username, birthdate, and password. newline3. Register your preferred course/s and schedule. newline4. Contact the Enrollment Adviser/Secretary/Dean of the school regarding concerns about the subjects or the enrollment system through official email or Facebook account of the school. newline5. Pay the required down payment in any of the accredited banks or at the UB Cashier. newline6. View your schedule on the Student Portal. newline7. Proceed to the MIS Office at F building for your school ID validation."
+]
 
-# Train the chatbot using list trainer
-trainer = ListTrainer(bot)
-trainer.train(enrollment_data)
+process_two = [
+    "What are the admission requirements for incoming freshmen?",
+    "For incoming freshmen, the admission requirements include: newlineCertified true copy of Grade 11 report card (F-138/SF9) with complete and passing grades and Grade 12 First Semester Report Card (F-138/SF9) duly signed by the school principal; or newlineCertificate of No Failing Grades filled out by the school principal.newlinePhotocopy of PSA Birth Certificate. newlineFor more details, you can visit the enrollment page on the UB website."
+]
 
-# Now, let's chat with the bot
-while True:
-    user_input = input("You: ")
-    response = bot.get_response(user_input)
-    print("Bot: ", response)
-=======
-from enrollment_data import enrollment_queries, process_one, process_two, process_three, question, programs
+process_three = [
+    "Can you tell me about the reservation procedures for incoming freshmen?",
+    "Certainly! Here are the online reservation procedures for incoming freshmen: newline1. Register at UB Student Portal. newline2. Click Apply as a New Student and complete all the needed information. newline3. Download and fill-out the Declaration and Waiver Form and Data Privacy Consent Form. newline4. Pay the Admission Processing Fee of Php 1,000.00 to any UB accredited Banks. newline5. Prepare and scan the admission requirements (PDF format ONLY) and upload them. newline 6. Go to the New Student Online Credentials Submission Form and upload the scanned copy of admission requirements and reservation fee acknowledgment receipt. newline7. Once the needed admission documents are verified and accepted, ARC staff will approve the application for reservation. newline8. Courses will be reserved based on the student's program and curriculum. newline9. You shall receive a confirmation email of your reservation with your UB student ID number."
 
-bot = ChatBot('EnrollmentBot')
+]
 
-trainer = ListTrainer(bot)
-trainer.train(enrollment_queries)
-trainer.train(process_one)
-trainer.train(process_two)
-trainer.train(process_three)
-trainer.train(question)
-trainer.train(programs)
+question = [
+    "What's the deadline for enrollment?",
+    "The deadline for enrollment for incoming freshmen/transferees for the First Semester of Academic Year 2024-2025 is until August 12, 2024. It's important to complete your enrollment process before this date to secure your slot."
+]
 
+programs = [
+    "Hi, I'm interested in enrolling for a program. What options do you have?",
+    "We offer the following programs: newlineBSCS - Bachelor of Science in Computer Science newlineBSCOE - Bachelor of Science in Computer Engineering newlineBSIT - Bachelor of Science in Information Technology newlineACT - Associate in Computer Technology newlineACT-MWD - Associate in Computer Technology with Specialization in Multimedia",
 
-while True:
-    user_input = input("You: ")
-    response = bot.get_response(user_input)
-    
-    response_str = str(response)
-    
-    response_lines = response_str.split("newline")
-    print("EnrollmentBot: ", end="")
-    for line in response_lines:
-        print(line)
-
-#possible queries: (from enrollment_data.py)
-#Hi, I'm interested in enrolling for a program. What options do you have?
-# What's the deadline for enrollment?
-# Can you tell me about the reservation procedures for incoming freshmen?
-# What are the admission requirements for incoming freshmen?
-# Hi, I'm a new student. How do I enroll for courses?
-# What are the subjects for Associate in Computer Technology in the first semester of the first year?
-# What are the subjects for Multimedia and Web Design in the first semester of the first year?
-# What are the subjects for Information Technology in the first semester of the first year?
-# What are the subjects for Computer Engineering in the first semester of the first year?
-# What are the subjects for Computer Science in the first semester of the first year?
->>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
+]
