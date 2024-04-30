@@ -2,7 +2,7 @@ from rich.console import Console
 from rich.table import Table
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-from test_data import enrollment_data, enrollment_process_data, all_course, course_description
+from test_data import specific_subjects, all_subjects, enrollment_queries, program_queries
 
 # Initialize ChatBot instance
 bot = ChatBot('EnrollEase')
@@ -10,22 +10,22 @@ bot = ChatBot('EnrollEase')
 # Initialize ListTrainer
 trainer = ListTrainer(bot)
 
-# Concatenate all subjects from enrollment_data and all_course into a single list
-all_subjects = []
-for course_data in enrollment_data + all_course:
+# Concatenate all subjects from specific_subjects and all_subjects into a single list
+all_subject_list = []
+for course_data in specific_subjects + all_subjects:
     for subjects in course_data["subjects"].values():
-        all_subjects.extend(subjects)
+        all_subject_list.extend(subjects)
 
 # Train the bot with all subjects
-trainer.train(all_subjects)
+trainer.train(all_subject_list)
 
 # Train the bot with enrollment process steps
-for process in enrollment_process_data:
+for process in enrollment_queries:
     trainer.train(process["steps"])
 
-# Train the bot with course description data
-for description in course_description:
-    trainer.train(description["desc"])
+for program_data in program_queries:
+    trainer.train(program_data["desc"])
+
 
 console = Console()
 
@@ -34,15 +34,26 @@ def handle_user_input(user_input, console):
     response_all = None
     program_input = None  # Initialize program_input
 
-    # Check for greetings
     greetings = ["hi", "hello", "hey"]
     if user_input in greetings:
         bot_response = "EnrollEase: Hi, I'm EnrollEase! How may I help you with the SIT Enrollment?"
         console.print(bot_response)
         return
 
+    entrance_exam = ["entrance exam", "exam"]
+    if user_input in entrance_exam:
+        bot_response = "EnrollEase: Good news! There's no entrance exam at the University of Baguio."
+        console.print(bot_response)
+        return
+    
+    tuition = ["tuition fee", "payment", "tuition"]
+    if user_input in tuition:
+        bot_response = "EnrollEase: For tuition fee information, please visit SIT Office, F Building, 2nd floor."
+        console.print(bot_response)
+        return
+    
     # Check for specific user input related to enrollment process
-    for process_data in enrollment_process_data:
+    for process_data in enrollment_queries:
         for process in process_data["process"]:
             if process.lower() in user_input:
                 response = process_data["steps"]
@@ -50,15 +61,15 @@ def handle_user_input(user_input, console):
                 bot_response = f"EnrollEase: Here's the {header}:"
                 break
     
-    #check for course description
-    for course_data in course_description:
+    #check for program description
+    for course_data in program_queries:
         for desc in course_data["about"]:
             if desc.lower() in user_input:
                 response = course_data["desc"]
 
     # Check for subjects
     if not response:
-        for course_data in enrollment_data:
+        for course_data in specific_subjects:
             for course in course_data["course"]:
                 if course.lower() in user_input:
                     program_input = course  # Set program_input to the matched course
@@ -72,7 +83,7 @@ def handle_user_input(user_input, console):
 
     # Check for all subjects
     if not response:
-        for course_all_data in all_course:
+        for course_all_data in all_subjects:
             for course in course_all_data["course"]:
                 if course.lower() in user_input:
                     program_input = course  # Set program_input to the matched course
@@ -86,6 +97,8 @@ def handle_user_input(user_input, console):
             header = "SIT Programs"
         elif "admission requirements" in user_input:
             header = "Admission Requirements"
+        elif "tuition" in user_input:
+            bot_response = f"EnrollEase: {response}"
         else:
             header = "Course Description"
         bot_response = f"EnrollEase:"
@@ -151,15 +164,13 @@ FOR ENROLLMENT QUERIES:
     > admission requirements for incoming freshmen|transferee 
     > reservation for incoming freshmen
     > enrollment deadline|date
-    > entrance exam (NOT YET ADDED)
+    > entrance exam 
 
 FOR PROGRAMS:
     > programs offered (e.g., Give me programs offered under SIT)
+    > program description (e.g., What is BSCS)
 
-FOR TUITION FEE: (NOT YET ADDED)
+FOR TUITION FEE:
     > tuition fee (e.g., How much is the tuition fee for . . . )
 
 """
-# Add entrance exam and tuition fee query
-# Fix course description (it's not showing)
-# Can the greetings be added to the training set?
