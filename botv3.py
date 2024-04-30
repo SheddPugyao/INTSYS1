@@ -39,18 +39,6 @@ def handle_user_input(user_input, console):
         bot_response = "EnrollEase: Hi, I'm EnrollEase! How may I help you with the SIT Enrollment?"
         console.print(bot_response)
         return
-
-    entrance_exam = ["entrance exam", "exam"]
-    if user_input in entrance_exam:
-        bot_response = "EnrollEase: Good news! There's no entrance exam at the University of Baguio."
-        console.print(bot_response)
-        return
-    
-    tuition = ["tuition fee", "payment", "tuition"]
-    if user_input in tuition:
-        bot_response = "EnrollEase: For tuition fee information, please visit SIT Office, F Building, 2nd floor."
-        console.print(bot_response)
-        return
     
     # Check for specific user input related to enrollment process
     for process_data in enrollment_queries:
@@ -97,10 +85,8 @@ def handle_user_input(user_input, console):
             header = "SIT Programs"
         elif "admission requirements" in user_input:
             header = "Admission Requirements"
-        elif "tuition" in user_input:
-            bot_response = f"EnrollEase: {response}"
         else:
-            header = "Course Description"
+            header = " "
         bot_response = f"EnrollEase:"
         console.print(bot_response)
         table = Table(show_header=True)

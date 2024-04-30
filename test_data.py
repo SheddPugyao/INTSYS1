@@ -738,7 +738,21 @@ enrollment_queries = [
         "steps": [
             "The deadline for enrollment for incoming freshmen/transferees for the First Semester of Academic Year 2024-2025 is until August 12, 2024. It's important to complete your enrollment process before this date to secure your slot."
         ]
-    }
+    },
+    # TUITION/EXAM
+    {
+         "process": ["tuition fee", "payment", "tuition"],
+        "steps": [
+           "For tuition fee information, please visit SIT Office, F Building, 2nd floor."
+        ]
+    },
+    {
+         "process": ["entrance exam", "exam"],
+        "steps": [
+           "Good news! There's no entrance exam at the University of Baguio."
+        ]
+    },
+
 ]
 
 # PROGRAM QUERIES
