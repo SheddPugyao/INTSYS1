@@ -2,7 +2,7 @@ from rich.console import Console
 from rich.table import Table
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-from test_data import specific_subjects, all_subjects, enrollment_queries, program_queries
+from test_data import specific_subjects, all_subjects, enrollment_queries, program_queries, other_data
 
 # Initialize ChatBot instance
 bot = ChatBot('EnrollEase')
@@ -23,8 +23,13 @@ trainer.train(all_subject_list)
 for process in enrollment_queries:
     trainer.train(process["steps"])
 
+# Train bot for course description
 for program_data in program_queries:
     trainer.train(program_data["desc"])
+
+# Train bot for other data
+for other in other_data:
+    trainer.train(other["steps"])
 
 
 console = Console()
@@ -49,11 +54,18 @@ def handle_user_input(user_input, console):
                 bot_response = f"EnrollEase: Here's the {header}:"
                 break
     
-    #check for program description
+    #Check for other queries in user input
+    for others in other_data:
+        for data in others["process"]:
+            if data.lower() in user_input:
+                other_response = others["steps"]
+                
+    #check for program description in user input 
     for course_data in program_queries:
         for desc in course_data["about"]:
             if desc.lower() in user_input:
                 response = course_data["desc"]
+    
 
     # Check for subjects
     if not response:
@@ -79,14 +91,18 @@ def handle_user_input(user_input, console):
                     header = f"{course}"
                     break
 
-    # Display subjects or enrollment process
+    # Display subjects, enrollment process, course description
     if response:
         if "programs offered" in user_input:
             header = "SIT Programs"
         elif "admission requirements" in user_input:
             header = "Admission Requirements"
+        elif "reservation" in user_input:
+            header = "Reservation for Freshmen"
+        elif "enrollment" in user_input:
+            header = "Enrollment Process"
         else:
-            header = " "
+            header = "Course Description"
         bot_response = f"EnrollEase:"
         console.print(bot_response)
         table = Table(show_header=True)
@@ -96,6 +112,11 @@ def handle_user_input(user_input, console):
             table.add_row(item)
 
         console.print(table)
+    
+    elif other_response:
+         for item in other_response:
+            bot_response = f"EnrollEase: {item}"
+            console.print(bot_response)
 
     elif response_all:
         bot_response = f"EnrollEase: Here are the subjects offered under {header}:"
@@ -121,7 +142,7 @@ def handle_user_input(user_input, console):
         console.print(table)
 
     else:
-        print("Bot: I'm sorry, I couldn't find information for that query. Please clarify.")
+        print("EnrollEase: I'm sorry, I couldn't find information for that query. Please clarify.")
 
 def main():
     while True:

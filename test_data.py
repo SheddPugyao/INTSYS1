@@ -731,27 +731,7 @@ enrollment_queries = [
             " > View your schedule on the student portal.", 
             " > Proceed to the MIS Office at F-Building for your school ID Application.", 
         ]
-    },
-    # OTHERS
-    {
-        "process": ["Enrollment Deadline", "enrollment date"],
-        "steps": [
-            "The deadline for enrollment for incoming freshmen/transferees for the First Semester of Academic Year 2024-2025 is until August 12, 2024. It's important to complete your enrollment process before this date to secure your slot."
-        ]
-    },
-    # TUITION/EXAM
-    {
-         "process": ["tuition fee", "payment", "tuition"],
-        "steps": [
-           "For tuition fee information, please visit SIT Office, F Building, 2nd floor."
-        ]
-    },
-    {
-         "process": ["entrance exam", "exam"],
-        "steps": [
-           "Good news! There's no entrance exam at the University of Baguio."
-        ]
-    },
+    }
 
 ]
 
@@ -790,5 +770,25 @@ program_queries = [
     }
 ]
 
-
-
+other_data = [
+      # TUITION/EXAM
+    {
+         "process": ["tuition fee", "payment", "tuition"],
+        "steps": [
+           "For tuition fee information, please visit SIT Office, F Building, 2nd floor."
+        ]
+    },
+    {
+         "process": ["entrance exam", "exam"],
+        "steps": [
+           "Good news! There's no entrance exam at the University of Baguio."
+        ]
+    },
+    # OTHERS
+    {
+        "process": ["Enrollment Deadline", "enrollment date"],
+        "steps": [
+            "The deadline for enrollment for incoming freshmen/transferees for the First Semester of Academic Year 2024-2025 is until August 12, 2024. It's important to complete your enrollment process before this date to secure your slot."
+        ]
+    }
+]
