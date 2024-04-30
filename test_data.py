@@ -264,25 +264,39 @@ enrollment_data = [
         "course": ["Applied Software Engineering", "ASE"],
         "subjects": {
             "first year first semester": [
-                "INTRCS1 - Introduction to Computing Systems",
-                "PLFORM1 - Program Logic Formulation",
-                "THSELF1 - Understanding the Self",
-                "ARTAPP1 - Art Appreciation",
-                "MATHMW1 - Mathematics in the Modern World",
-                "PRPCOM1 - Purposive Communication",
-                "NSTPRO1 - National Service Training Program 1",
-                "EDPHYS1 - PE Elective 1",
+                "LITCPJ1 - Capstone Project",
+				"LITDDI1 - Database Design and Implementation",
+				"LITFED1 - Front End Development",
+				"LITPFS1 - Programming Foundation",
+				"LITUIF1 - UI Frameworks",
+				"LITWDF1 - Web Development Foundations",
                 "SOCORN1 - Social Orientation"
             ],
+
             "first year second semester": [
-                "SITNET1 - Networks and Communications",
-                "PROGIT1 - Computer Programming",
-                "HUMCOM1 - Human Computer Interaction",
-                "DITRUC1 - Discrete Structures 1",
-                "DIGIMD1 - Digital Media 1",
-                "CWORLD1 - The Contemporary World",
-                "NSTPRO2 - National Service Training Program 2",
-                "EDPHYS2 - PE Elective 2"
+                "LITAWD1 - Agile Development",
+				"LITAPI1 - Application Development and Process",
+				"LITDEA1 - Application Integration",
+				"LITCPL1 - Capstone Project - Application Development",
+				"LITWFS1 - Development Enterprise Applications",
+				"LITADP1 - Web Development Using Platforms" 
+            ],
+            "second year first semester": [
+                "GETHCS1 - Ethics",
+				"EDPHYS5 - Fitness",
+				"LITISN1 - IT Systems and Networks",
+				"NSTPRO1 - National Service Training Program 1",
+				"LITTCN1 - Teamwork and Collaboration",
+				"THSELF1 - Understanding the Self"
+            ],
+            "second year second semester": [
+                "LITACS1 - Agile Collaboration Skills",
+				"ARTAPP1 - Art Appreciation",
+				"EDPHYS10 - Board Games",
+				"LITISE1 - IT Security",
+				"MATHMW1 - Math and the Modern World",
+				"NSTPRO2 - National Service Training Program 2",
+				"SCITES1 - Science, Technology and Society"
             ]
         }
     }
@@ -673,38 +687,38 @@ all_course = [
         "course": ["Multimedia and Web Design", "ACT-MWD"],
         "subjects": {
             "1ST YEAR 1ST SEMESTER": [
-                "INTRCS1 - Introduction to Computing Systems",
-                "PROPHY1 - Computer Programming 1",
-                "ARTAPP1 - Art Appreciation",
-                "MATHMW1 - Mathematics in the Modern World",
-                "ACTDRW1 - Freehand and Digital Drawing",
-                "NSTPRO1 - National Service Training Program 1",
-                "HCORDI1 - Cordillera: History and Socio-Cultural Heritage",
-                "PATHFT1 - Movement Competency Training",
-                "SOCORN2 - Social Orientation"
+                "LITCPJ1 - Capstone Project",
+				"LITDDI1 - Database Design and Implementation",
+				"LITFED1 - Front End Development",
+				"LITPFS1 - Programming Foundation",
+				"LITUIF1 - UI Frameworks",
+				"LITWDF1 - Web Development Foundations",
+                "SOCORN1 - Social Orientation"
             ],
             "1ST YEAR 2ND SEMESTER": [
-                "PROPHY2 - Object-Oriented Programming with Flask",
-                "ACTSOP1 - Professional Issues in Computing",
-                "ACTGRH1 - Graphics Design",
-                "ACTHUM1 - Web Design",
-                "CWORLD1 - The Contemporary World",
-                "NSTPRO2 - National Service Training Program 2",
-                "PATHFT2 - Exercise-based Fitness Activities"
+                "LITAWD1 - Agile Development",
+				"LITAPI1 - Application Development and Process",
+				"LITDEA1 - Application Integration",
+				"LITCPL1 - Capstone Project - Application Development",
+				"LITWFS1 - Development Enterprise Applications",
+				"LITADP1 - Web Development Using Platforms" 
             ],
             "2ND YEAR 1ST SEMESTER": [
-                "DSALGO1 - Data Structures and Algorithms",
-                "PRPCOM1 - Purposive Communication",
-                "ACTIMD1 - Database System",
-                "ACTSCR1 - Script Writing and Story Board Design",
-                "ACTANI1 - Principles of 2D Animation",
-                "LRIZAL1 - Life and Works of Jose Rizal",
-                "PATHFT3D - Bowling"
+                "GETHCS1 - Ethics",
+				"EDPHYS5 - Fitness",
+				"LITISN1 - IT Systems and Networks",
+				"NSTPRO1 - National Service Training Program 1",
+				"LITTCN1 - Teamwork and Collaboration",
+				"THSELF1 - Understanding the Self"
             ],
             "2ND YEAR 2ND SEMESTER": [
-                "ACTOJT1 - Internship",
-                "ACTGUI1 - GUI-based Applications Development",
-                "PATFT4A - Basketball/Volleyball"
+                "LITACS1 - Agile Collaboration Skills",
+				"ARTAPP1 - Art Appreciation",
+				"EDPHYS10 - Board Games",
+				"LITISE1 - IT Security",
+				"MATHMW1 - Math and the Modern World",
+				"NSTPRO2 - National Service Training Program 2",
+				"SCITES1 - Science, Technology and Society"
             ],
         }
     },

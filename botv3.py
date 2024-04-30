@@ -161,6 +161,5 @@ FOR TUITION FEE: (NOT YET ADDED)
 
 """
 # Add entrance exam and tuition fee query
-# Update ASE info
 # Fix course description (it's not showing)
 # Can the greetings be added to the training set?
