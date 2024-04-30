@@ -16,18 +16,16 @@ for course_data in enrollment_data + all_course:
     for subjects in course_data["subjects"].values():
         all_subjects.extend(subjects)
 
-# Concatenate all course descriptions into a single list
-all_descriptions = [desc["desc"] for desc in course_description]
-
 # Train the bot with all subjects
 trainer.train(all_subjects)
-
-# Train the bot with all course descriptions
-trainer.train(all_descriptions)
 
 # Train the bot with enrollment process steps
 for process in enrollment_process_data:
     trainer.train(process["steps"])
+
+# Train the bot with course description data
+for description in course_description:
+    trainer.train(description["desc"])
 
 console = Console()
 
@@ -51,6 +49,12 @@ def handle_user_input(user_input, console):
                 header = "Enrollment Process"
                 bot_response = f"EnrollEase: Here's the {header}:"
                 break
+    
+    #check for course description
+    for course_data in course_description:
+        for desc in course_data["about"]:
+            if desc.lower() in user_input:
+                response = course_data["desc"]
 
     # Check for subjects
     if not response:
@@ -82,6 +86,8 @@ def handle_user_input(user_input, console):
             header = "SIT Programs"
         elif "admission requirements" in user_input:
             header = "Admission Requirements"
+        else:
+            header = "Course Description"
         bot_response = f"EnrollEase:"
         console.print(bot_response)
         table = Table(show_header=True)

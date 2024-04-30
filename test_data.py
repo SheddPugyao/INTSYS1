@@ -741,23 +741,23 @@ all_course = [
 course_description = [
     {
         "about": ["what is BSCS", "bscs all about"],
-        "desc": "Bachelor of Science in Computer Science \n- The BS Computer Science is a 4-year program that includes the study of computing concepts and theories, algorithmic foundations, and new developments in computing. The program prepares students to design and create algorithmically complex software and develop new and effective algorithms for solving computing problems.\n"
+        "desc": ["Bachelor of Science in Computer Science \n- The BS Computer Science is a 4-year program that includes the study of computing concepts and theories, algorithmic foundations, and new developments in computing. The program prepares students to design and create algorithmically complex software and develop new and effective algorithms for solving computing problems.\n"]
     },
     {
         "about": ["what is BSCOE", "bscoe all about"],
-        "desc": "Bachelor of Science in Computer Engineering \n- The BS in Computer Engineering is a 4 year program that embodies the science and technology of design, development, implementation, maintenance and integration of software and hardware components in modern computing systems and computer-controlled equipment.\n"
+        "desc": ["Bachelor of Science in Computer Engineering \n- The BS in Computer Engineering is a 4 year program that embodies the science and technology of design, development, implementation, maintenance and integration of software and hardware components in modern computing systems and computer-controlled equipment.\n"]
     },
     {
         "about": ["what is BSIT", "bsit all about"],
-        "desc": "Bachelor of Science in Information Technology\n- The BS Information Technology is a 4 year program that includes the study of the utilization of both hardware and software technologies involving planning, installing, customizing, operating, managing, and administering, and maintaining information technology infrastructure that provides computing solutions to address the needs of an organization.\n"
+        "desc": ["Bachelor of Science in Information Technology\n- The BS Information Technology is a 4 year program that includes the study of the utilization of both hardware and software technologies involving planning, installing, customizing, operating, managing, and administering, and maintaining information technology infrastructure that provides computing solutions to address the needs of an organization.\n"]
     },
     {
         "about": ["what is ASE", "ase all about"],
-        "desc": "Applied Software Engineering\n- Applied Software Engineering is a work-study program that fosters multidisciplinary software development skills. It integrates modern technologies like Data Science, Machine Learning, Artificial Intelligence, and Natural Language Processing with small to medium-scale enterprise application development.\n"
+        "desc": ["Applied Software Engineering\n- Applied Software Engineering is a work-study program that fosters multidisciplinary software development skills. It integrates modern technologies like Data Science, Machine Learning, Artificial Intelligence, and Natural Language Processing with small to medium-scale enterprise application development.\n"]
     },
     {
         "about": ["what is ACT-MWD", "act-mwd all about"],
-        "desc": "Associate in Computer Technology with Specialization in Multimedia\n- The Computer Technology program with Multimedia and Web Design specialization trains students in computer programming and creative multimedia skills for the industry. Graduates are prepared to pursue TESDA or IT industry certifications.\n"
+        "desc": ["Associate in Computer Technology with Specialization in Multimedia\n- The Computer Technology program with Multimedia and Web Design specialization trains students in computer programming and creative multimedia skills for the industry. Graduates are prepared to pursue TESDA or IT industry certifications.\n"]
     }
 ]
 
