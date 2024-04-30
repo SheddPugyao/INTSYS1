@@ -1,6 +1,5 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-<<<<<<< HEAD
 
 # Create a new instance of a ChatBot
 bot = ChatBot('EnrollmentBot')
@@ -72,7 +71,6 @@ enrollment_data = [
     "The subjects for Associate in Computer Technology in the second semester of the first year are: SITNET1 - Networks and Communications, PROGIT1 - Computer Programming, HUMCOM1 - Human Computer Interaction, DITRUC1 - Discrete Structures 1, DIGIMD1 - Digital Media 1, CWORLD1 - The Contemporary World, NSTPRO2 - National Service Training Program 2, EDPHYS2 - PE Elective 2."
 ]
 
-
 # Train the chatbot using list trainer
 trainer = ListTrainer(bot)
 trainer.train(enrollment_data)
@@ -82,7 +80,6 @@ while True:
     user_input = input("You: ")
     response = bot.get_response(user_input)
     print("Bot: ", response)
-=======
 from enrollment_data import enrollment_queries, process_one, process_two, process_three, question, programs
 
 bot = ChatBot('EnrollmentBot')
@@ -118,4 +115,3 @@ while True:
 # What are the subjects for Information Technology in the first semester of the first year?
 # What are the subjects for Computer Engineering in the first semester of the first year?
 # What are the subjects for Computer Science in the first semester of the first year?
->>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2

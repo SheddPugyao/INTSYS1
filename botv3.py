@@ -31,6 +31,7 @@ for process in enrollment_process_data:
 
 console = Console()
 
+
 def handle_user_input(user_input, console):
     response = None
     response_all = None
@@ -61,8 +62,8 @@ def handle_user_input(user_input, console):
                     for semester, subjects in course_data["subjects"].items():
                         if semester.lower() in user_input:
                             response = subjects
-                            program_name = course_data["course"][0].upper() 
-                            semester_name = semester.upper() 
+                            program_name = course_data["course"][0].upper()
+                            semester_name = semester.upper()
                             header = f"{program_name} - {semester_name} SUBJECTS"
                             break
 
@@ -85,7 +86,7 @@ def handle_user_input(user_input, console):
         bot_response = f"EnrollEase:"
         console.print(bot_response)
         table = Table(show_header=True)
-        table.add_column(header) 
+        table.add_column(header)
 
         for item in response:
             table.add_row(item)
@@ -99,24 +100,25 @@ def handle_user_input(user_input, console):
             header = f"{program_input.upper()}"
         else:
             print("All Subjects:")
-        
+
         table = Table(show_header=True)
         table.add_column("Semester", style="cyan")
         table.add_column("Subjects")
 
-        last_year = None  
+        last_year = None
         for semester, subjects in response_all.items():
             year, sem = semester.split()[:2]
             # Check if the year is different from the last one, add space if so
             if year != last_year:
-                table.add_row("") 
+                table.add_row("")
                 last_year = year
             table.add_row(semester, "\n".join(subjects))
-        
+
         console.print(table)
 
     else:
         print("Bot: I'm sorry, I couldn't find information for that query. Please clarify.")
+
 
 def main():
     while True:
@@ -125,6 +127,7 @@ def main():
             print("EnrollEase: Feel free to reach out for any further inquiries. Goodbye!")
             break
         handle_user_input(user_input, console)
+
 
 if __name__ == "__main__":
     main()

@@ -466,79 +466,72 @@
 				]
 			}
 		},
-<<<<<<< HEAD
 		"ASE": {
-=======
-		"ACT": {
->>>>>>> 23be54cda6d4ce0e84fddb3c3f93b547caeeb1a2
 			"first year": {
 				"first_sem": [
-					{ "subject": "INTRCS1", "desc": "Introduction to Computing Systems" },
-					{ "subject": "PLFORM1", "desc": "Program Logic Formulation" },
-					{ "subject": "THSELF1", "desc": "Understanding the Self" },
-					{ "subject": "ARTAPP1", "desc": "Art Appreciation" },
-					{ "subject": "MATHMW1", "desc": "Mathematics in the Modern World" },
-					{ "subject": "PRPCOM1", "desc": "Purposive Communication" },
-					{
-						"subject": "NSTPRO1",
-						"desc": "National Service Training Program 1"
-					},
-					{
-						"subject": "EDPHYS1",
-						"desc": "PE Elective 1"
-					},
+					{ "subject": "LITCPJ1", "desc": "Capstone Project" },
+					{ "subject": "LITDDI1", "desc": "Database Design and Implementation" },
+					{ "subject": "LITFED1", "desc": "Front End Development" },
+					{ "subject": "LITPFS1", "desc": "Programming Foundation" },
+					{ "subject": "LITUIF1", "desc": "UI Frameworks" },
+					{ "subject": "LITWDF1", "desc": "Web Development Foundations" },
 					{ "subject": "SOCORN1", "desc": "Social Orientation" }
 				],
 				"second_sem": [
-					{ "subject": "SITNET1", "desc": "Networks and Communications" },
-					{ "subject": "PROGIT1", "desc": "Computer Programming" },
-					{ "subject": "HUMCOM1", "desc": "Human Computer Interaction" },
-					{ "subject": "DITRUC1", "desc": "Discrete Structures 1" },
-					{ "subject": "DIGIMD1", "desc": "Digital Media 1" },
-					{ "subject": "CWORLD1", "desc": "The Contemporary World" },
-					{
-						"subject": "NSTPRO2",
-						"desc": "National Service Training Program 2"
-					},
-					{ "subject": "EDPHYS2", "desc": "PE Elective 2" }
+					{ "subject": "LITAWD1", "desc": "Agile Development" },
+					{ "subject": "LITAPI1", "desc": "Application Development and Process" },
+					{ "subject": "LITDEA1", "desc": "Application Integration" },
+					{ "subject": "LITCPL1", "desc": "Capstone Project - Application Development" },
+					{ "subject": "LITWFS1", "desc": "Development Enterprise Applications" },
+					{ "subject": "LITADP1", "desc": "Web Development Using Platforms" }
 				]
 			},
 			"second year": {
 				"first_sem": [
-					{
-						"subject": "OPSYST1",
-						"desc": "Operating System"
-					},
-					{ "subject": "PROGIT2", "desc": "Object-Oriented Programming" },
-					{
-						"subject": "APPDEV1",
-						"desc": "Introduction to Applications Development"
-					},
-					{ "subject": "DSALGO1", "desc": "Data Structures and Algorithms" },
-					{
-						"subject": "FILPIN",
-						"desc": "Kontekstwalisadong Kumunikasyon sa Filipino"
-					},
 					{ "subject": "GETHCS1", "desc": "Ethics" },
-					{ "subject": "DIGIMD2", "desc": "Digital Media 2" }
+					{ "subject": "EDPHYS5", "desc": "Fitness" },
+					{ "subject": "LITISN1", "desc": "IT Systems and Networks" },
+					{ "subject": "NSTPRO1", "desc": "National Service Training Program 1"},
+					{ "subject": "LITTCN1", "desc": "Teamwork and Collaboration" },
+					{ "subject": "THSELF1", "desc": "Understanding the Self" }
 				],
 				"second_sem": [
-					{
-						"subject": "IMDBSE1",
-						"desc": "Information Management and Database Systems"
-					},
-					{ "subject": "WEBSYS1", "desc": "Web Systems and Technologies 1" },
-					{
-						"subject": "SYSINT1",
-						"desc": "System Integration and Architecture"
-					},
-					{ "subject": "SCITES1", "desc": "Science, Technology, and Society" },
-					{
-						"subject": "RPHIST1",
-						"desc": "Readings in Philippine History"
-					},
-					{ "subject": "ACTCER1", "desc": "ACT Certification" },
-					{ "subject": "ACTOJT1", "desc": "Practicum" }
+					{ "subject": "LITACS1", "desc": "Agile Collaboration Skills" },
+					{ "subject": "ARTAPP1", "desc": "Art Appreciation" },
+					{ "subject": "EDPHYS10", "desc": "Board Games" },
+					{ "subject": "LITISE1", "desc": "IT Security" },
+					{ "subject": "MATHMW1",  "desc": "Math and the Modern World" },
+					{ "subject": "NSTPRO2", "desc": "National Service Training Program 2" },
+					{ "subject": "SCITES1", "desc": "Science, Technology and Society" }
+				]
+			},
+			"third year": {
+				"first_sem": [
+					{ "subject": "LITDSE1", "desc": "Data Science Essentials" },
+					{ "subject": "GELECT3", "desc": "General Elective 3" },
+					{ "subject": "LRIZAL1", "desc": "Life and Works of Jose Rizal" },
+					{ "subject": "EDPHYS6", "desc": "Rhythmic Activities"},
+					{ "subject": "LITSTD1", "desc": "Statistical Thinking for Data Science" },
+					{ "subject": "CWORLD1", "desc": "The Contemporary World" }
+				],
+				"second_sem": [
+					{ "subject": "LITATD1", "desc": "Advance Techniques in Data Analysis" },
+					{ "subject": "GELECT1", "desc": "General Elective 2" },
+					{ "subject": "GELECT2", "desc": "General Elective 3" },
+					{ "subject": "LITBRP1", "desc": "R Programming" },
+					{ "subject": "EDPHYS13",  "desc": "Traditional Games" }
+				]
+			},
+			"fourth year": {
+				"first_sem": [
+					{ "subject": "LITDLF1", "desc": "Deep Learning" },
+					{ "subject": "LITAML1", "desc": "Machine Learning" },
+					{ "subject": "PRPCOM1", "desc": "Purposive Communication" },
+					{ "subject": "RPHIST1", "desc": "Readings in Philippine History"}
+				],
+				"second_sem": [
+					{ "subject": "LITDEP1", "desc": "Digital Entrepreneurship" },
+					{ "subject": "LITRLF1", "desc": "Reinforcement Learning" }
 				]
 			}
 		}
